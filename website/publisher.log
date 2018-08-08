@@ -1,1 +1,16 @@
 publisher log
+2018-08-08 11:01:44: Exporting: mi carnet_jnh6liurjbpn.json
+2018-08-08 11:01:44: -----------------
+2018-08-08 11:01:44: Error:
+2018-08-08 11:01:44: -----------------
+2018-08-08 11:01:44: name 'student_id' is not defined
+2018-08-08 11:01:44:  
+2018-08-08 11:01:44:  
+2018-08-08 11:03:24: Exporting: mi carnet_jnh6liurjbpn.json
+2018-08-08 11:04:28: Done. Added: 35172 records to database. Deleting file...
+2018-08-08 11:04:38: Nothing found in folder. Sleeping for: 10 seconds
+2018-08-08 11:04:48: Nothing found in folder. Sleeping for: 10 seconds
+2018-08-08 11:04:58: Nothing found in folder. Sleeping for: 10 seconds
+2018-08-08 11:05:08: Nothing found in folder. Sleeping for: 10 seconds
+2018-08-08 11:05:18: Nothing found in folder. Sleeping for: 10 seconds
+2018-08-08 11:27:26: Nothing found in folder. Sleeping for: 10 seconds

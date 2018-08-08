@@ -14,10 +14,13 @@ def index(request):
 
 def upload_info(request):
 
+	anonimize = True
+
 	data = {}
 
 	if "GET" == request.method:
-		raise Http404("Method is set to GET")
+		data['mensaje_error'] = "Se produjo el siguiente error en el servidor: \n" + "Method is set to GET." + "\n\n" + "Por favor comuníquese con el monitor."
+		return render(request, 'location_uploads/error.html', data)
 
     # if not GET, then proceed
 	try:
@@ -70,6 +73,9 @@ def upload_info(request):
 				responses['hora_volver_hogar'] = int(request.POST.get('horas_volver_hogar'))*60 + int(request.POST.get('minutos_volver_hogar'))
 
 
+			if(anonimize):
+				responses['id_entrevistado'] = ps.anonimize(responses['id_entrevistado'])
+
 			ps.export_survey(responses)
 
 			data['envio'] = 'encuesta'
@@ -83,23 +89,31 @@ def upload_info(request):
 			student_id = request.POST.get('carnet')
 			interview_id = request.POST.get('id_entrevistado')
 
+			if(anonimize):
+				interview_id = ps.anonimize(interview_id)
+
 			json_file = request.FILES["json_file"]
-			if not json_file.name.endswith('.json'):
+			if not json_file.name.upper().endswith('.JSON'):
 				#NOt a JSON FILE
-				raise Http404("Not a JSON File")
+				data['mensaje_error'] = 'El archivo sumistrado no tiene una extensión .json. Asegurse de subir el archivo apropiado.'
+				return render(request, 'location_uploads/error.html', data)
 	        
 			print(json_file.name + ' received succesfully')	
 			json_text = json_file.read().decode("utf-8")	
 
 
-			data = json.loads(json_text)
+			try:
+				data = json.loads(json_text)
+			except:
+				data['mensaje_error'] = 'El archivo suministrado está corrupto y no puede ser procesado, verifique que se encuentre en formato JSON.'
+				return render(request, 'location_uploads/error.html', data)
+
+
+
 			data['student_id'] = student_id
 			data['interview_id'] = interview_id
 
 			ps.save_json(json_obj = data, name = student_id + '_' + interview_id)
-
-			#export_json_async.delay(student_id, interview_id, json_text)
-			#export_json_async.apply_async(args=[student_id, interview_id,json_text ], kwargs={'kwarg1': 'student_id', 'kwarg2': 'interview_id', 'kwarg3': 'json_text'})
 
 			data['envio'] = 'archivo json'
 			data['por_enviar'] = 'la encuesta'
@@ -107,25 +121,16 @@ def upload_info(request):
 			
 
 		else:
-			raise Http404("Tipo encuesta: "  + request.POST.get('tipo_encuesta') + ' no soportado')
-
-		#json_file = request.FILES["json_file"]
-		#if not json_file.name.endswith('.json'):
-			#NOt a JSON FILE
-		#	raise Http404("Not a JSON File")
-        #if file is too large, return
-		#if json_file.multiple_chunks():
-		#	raise Http404("Uploaded file is too big (%.2f MB)." % (json_file.size/(1000*1000),))
-
-		#json_text = json_file.read().decode("utf-8")	
-
-		#data['text'] = json_text
+			data['mensaje_error'] = "Tipo encuesta: "  + request.POST.get('tipo_encuesta') + ' no soportado.' + '\n' + 'Favor comuniquese con el monitor del curso.'
+			return render(request, 'location_uploads/error.html', data)
+			
 
 
 		return render(request, 'location_uploads/result.html', data)
 
 	except Exception as e:
-		raise Http404("Unable to load file")
+		data['mensaje_error'] = "Se produjo el siguiente error en el servidor: \n" + str(e) + "\n\n" + "Por favor comuníquese con el monitor."
+		return render(request, 'location_uploads/error.html', data)
 
 
 

@@ -1,5 +1,4 @@
 name,type
-carnet,VARCHAR
 id_entrevistado,VARCHAR
 timestamp,INT
 latitude,INT

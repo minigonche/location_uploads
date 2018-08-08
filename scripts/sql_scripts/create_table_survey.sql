@@ -1,6 +1,6 @@
 CREATE TABLE `db_location_uploads`.`survey_dev` (
   `carnet` VARCHAR(25) NOT NULL,
-  `id_entrevistado` VARCHAR(25) NOT NULL,
+  `id_entrevistado` VARCHAR(12) NOT NULL,
   `edad` INT UNSIGNED NULL,
   `estado_civil` VARCHAR(30) NULL,
   `sexo` VARCHAR(10) NULL,

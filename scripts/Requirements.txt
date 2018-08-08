@@ -1,6 +1,4 @@
 #Requirements
 pip install PyMySQL
 pip install pandas
-pip install celery
-pip install redis
-pip install celery[redis]
+

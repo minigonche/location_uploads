@@ -4,8 +4,8 @@
 import json
 import pymysql.cursors
 import pandas as pd
-
-
+import string
+import re
 
 # Gets the location of the sattic content
 # (Surely there Django does this but I could not figure it out)
@@ -29,6 +29,39 @@ def activity_mapper():
 	act = json.load(file)
 
 	return(act)
+
+
+def anonimize(entry_string, max_len = 12):
+
+	if(entry_string == ""):
+		return('0')
+	
+	#Eliminates unsupported charachters
+	entry_string = re.sub('[^0-9a-zA-Z]+', '0', entry_string)
+	entry_string = entry_string[(-1*min(max_len, len(entry_string))):]
+
+
+	entry_string = entry_string.lower()
+	out_string = ''
+
+	switch = 1
+
+	for i in range(len(entry_string)):
+		new_char = ""
+		if(entry_string[i].isalpha()):
+			new_number = string.ascii_lowercase.index(entry_string[i])
+			new_number = (new_number + switch*(i+1))%26
+			new_char = string.ascii_lowercase[new_number]
+		else:
+			new_number = int(entry_string[i])
+			new_number = (new_number + switch*(i+1))%10
+			new_char = str(new_number)
+
+		out_string = out_string + new_char
+		switch = switch*(-1)
+			
+
+	return(out_string)
 
 
 
@@ -134,7 +167,7 @@ def save_json(json_obj, name):
 
 
 #inserts the json file into the database by batches
-def export_json(student_id, interview_id, data, verbose = False):
+def export_json(interview_id, data, verbose = False):
 
 	shift_seconds = 946684800
 
@@ -163,8 +196,7 @@ def export_json(student_id, interview_id, data, verbose = False):
 	global_counter = 0
 	for location in data['locations'][0:-1]:
 
-		temp_loc = {}
-		temp_loc['carnet'] = student_id
+		temp_loc = {}		
 		temp_loc['id_entrevistado'] = interview_id
 
 		#sends it to seconds from 200/01/01
