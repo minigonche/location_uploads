@@ -1,0 +1,13 @@
+name,type
+carnet,VARCHAR
+id_entrevistado,VARCHAR
+timestamp,INT
+latitude,INT
+longitude,INT
+accuracy,INT
+velocity,INT
+altitude,INT
+vertical_accuracy,INT
+activity_timestamp,INT
+activity,VARCHAR
+activity_confidence,INT

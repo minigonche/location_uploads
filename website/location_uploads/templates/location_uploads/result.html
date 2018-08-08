@@ -1,3 +1,44 @@
-<h3> Sexo: {{sexo}} </h3>
-<h3> Estrato: {{estrato}} </h3>
-{{ text }}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Movilidad Bogota</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+	
+  </head>
+
+	<body>
+	<div class="container">
+      <div class="py-5 text-center">
+      {% load static %}
+        <img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/rosario.jpg" %}" alt="" width="680" height="342">
+        <h1>Datos de Movilidad en Bogotá</h1>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+       <div class="text-left">
+        <h2>Envio Exitoso</h2>        
+     	</div>
+
+      <div class="py-1">
+        <p>  Su {{envio}} se recibió exitosamente. Si todavía falta por enviar {{por_enviar}}, no olvide hacerlo</p>
+		     <input action="action" class="btn btn-primary" onclick="window.history.go(-1); return false;" type="button" value="Volver al Sistema de Recolección de Datos" />
+      </div>
+ 
+
+    </div>
+
+
+
+
+	</body>
+</html>

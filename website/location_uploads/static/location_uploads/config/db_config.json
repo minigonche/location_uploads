@@ -1,0 +1,10 @@
+{
+	
+	"host" : "location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com",
+	"user" : "administrador",
+	"password" : "anal_geografico_2018",
+	"db" : "db_location_uploads",
+	"max_insert_batch" : 10000,
+	"table_names" : {"surveys" : "survey_dev", "locations" : "locations_dev"}
+
+}

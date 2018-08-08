@@ -12,16 +12,19 @@
 
 
 	<script>
+
 	function mostrarEncuesta() {
     			document.getElementById("subir_encuesta").style.display = "block"
     			document.getElementById("subir_json").style.display = "none"
     			document.getElementById("tipo_encuesta").value = "informacion"
+    			document.getElementById("json_file").removeAttribute("required");
 			}
 
 	function mostrarJSON() {
     			document.getElementById("subir_encuesta").style.display = "none"
     			document.getElementById("subir_json").style.display = "block"
     			document.getElementById("tipo_encuesta").value = "json"
+    			document.getElementById("json_file").required = true;
 			}
 		
 	</script>
@@ -34,7 +37,7 @@
 	<div class="container">
       <div class="py-5 text-center">
       {% load static %}
-        <img class="d-block mx-auto mb-4" src="{% static "location_uploads/rosario.jpg" %}" alt="" width="680" height="342">
+        <img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/rosario.jpg" %}" alt="" width="680" height="342">
         <h1>Datos de Movilidad en Bogotá</h1>
         <p class="lead"> Sistema de recolección de datos.</p>
       </div>
@@ -73,8 +76,11 @@
 
 
 
-	<form action="{% url 'location_uploads:upload_info' %}" method="POST" enctype="multipart/form-data" class="form-horizontal"> 
+	<form action="{% url 'location_uploads:upload_info' %}" method="POST" enctype="multipart/form-data" class="form-horizontal" id = 'central_form'> 
 	{% csrf_token %}
+
+
+
 	<div class="form-group">
 
 		<div class="container">
@@ -180,13 +186,14 @@
 		            <div class="col-4">	                
 	  					<label for="edad">Edad</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="18" min = "1" max = "120" name="edad" id="edad">  				
+	   					 <input class="form-control" type="number" placeholder = "Ingrese su Edad" min = "1" max = "120" name="edad" id="edad">  				
 						</div>
 		            </div>
 
 		            <div class="col-4">
 		                <label for="estado_civil">Estado Civil</label>
 		                <select class="form-control" name="estado_civil" id="estado_civil">
+			                  <option></option>
 			                  <option value="En Solteria">En Soltería</option>
 			                  <option>En Pareja</option>
 			                  <option value="En Union Libre">En Unión Libre</option>
@@ -208,7 +215,8 @@
 		            <div class="col-4">
 		                <label for="sexo">Genero ¿cómo se identifica usted?</label>
 		                <select class="form-control" name="sexo" id="sexo">
-		                  <option>Prefiero no decirlo</option>
+		                  <option></option>
+		                  <option value= 'No Dice'>Prefiero no decirlo</option>
 		                  <option>Mujer</option>
 		                  <option>Hombre</option>
 		                  <option>Otro</option>
@@ -233,13 +241,14 @@
 		            <div class="col-4">	                
 	  					<label for="hijos">Número de Hijos</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" min="0" max = "12" name="hijos" id="hijos">  				
+	   					 <input class="form-control" type="number" placeholder = "Ingrese su Número de Hijos" min="0" max = "12" name="hijos" id="hijos">  				
 						</div>
 		            </div>
 
 		            <div class="col-4">
 		                <label for="vive">Usted Vive:</label>
 		                <select class="form-control" name="vive" id="vive">
+		                	  <option></option>
 			                  <option>Solo</option>
 			                  <option>Con sus padres</option>
 			                  <option value="Pareja-hijos">Pareja y/o hijos</option>
@@ -293,6 +302,7 @@
 		            <div class="col-4">
 		                <label for="vivienda">Tipo de Vivienda</label>
 		                <select class="form-control" name="vivienda" id="vivienda">
+		                	<option></option>
 		                  <option>Apartamento/Apartaestudio</option>
 		                  <option>Casa</option>
 		                  <option>Conjunto cerrado de Casas</option>		                  
@@ -328,14 +338,14 @@
 		            <div class="col-5">	                
 	  					<label for="gastos_transporte">¿Cuánto es su gasto semanal en transporte?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" min = "0" name="gastos_transporte" id="gastos_transporte">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="gastos_transporte" id="gastos_transporte">  				
 						</div>
 		            </div>
 
 					<div class="col-5">	                
 	  					<label for="gastos_alimentacion">¿Cuánto es su gasto semanal en alimentación?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" min = "0" name="gastos_alimentacion" id="gastos_alimentacion">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="gastos_alimentacion" id="gastos_alimentacion">  				
 						</div>
 		            </div>
 
@@ -349,14 +359,14 @@
 		            <div class="col-5">	                
 	  					<label for="gastos_seguridad_social">¿Cuánto paga de seguridad social (salud, pensión y ARL) al mes?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0"  min = "0" name="gastos_seguridad_social" id="gastos_seguridad_social">  				
+	   					 <input class="form-control" type="number" value=""  min = "0" name="gastos_seguridad_social" id="gastos_seguridad_social">  				
 						</div>
 		            </div>
 
 					<div class="col-5">	                
 	  					<label for="gastos_porcentaje_ahorro">Por lo general ¿Qué porcentaje de sus ingresos ahorra al mes?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0"  min = "0"  max = "100" name="gastos_porcentaje_ahorro" id="gastos_porcentaje_ahorro">  				
+	   					 <input class="form-control" type="number" value=""  min = "0"  max = "100" name="gastos_porcentaje_ahorro" id="gastos_porcentaje_ahorro">  				
 						</div>
 		            </div>
 
@@ -370,7 +380,7 @@
 					<div class="col-5">	                
 	  					<label for="gastos_total">Aproximadamente ¿Cuánto es su gasto total en un mes?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" name="gastos_total"  min = "0"  id="gastos_total">  				
+	   					 <input class="form-control" type="number" value="" name="gastos_total"  min = "0"  id="gastos_total">  				
 						</div>
 		            </div>
 
@@ -413,6 +423,7 @@
 		            <div class="col-4">	                
 		                <label for="cultura_ciudadana">Cultura Ciudadana</label>
 		                <select class="form-control" name="cultura_ciudadana" id="cultura_ciudadana">
+		                	  <option></option>
 			                  <option value = "1"> 1 (Poco Satisfecho)</option>
 			                  <option>2</option>
 			                  <option>3</option>
@@ -424,6 +435,7 @@
 		            <div class="col-4">
 		                <label for="medio_ambiente">Medio Ambiente</label>
 		                <select class="form-control" name="medio_ambiente" id="medio_ambiente">
+		                	<option></option>
 			                  <option value = "1"> 1 (Poco Satisfecho)</option>
 			                  <option>2</option>
 			                  <option>3</option>
@@ -444,6 +456,7 @@
 		            <div class="col-4">	                
 		                <label for="movilidad">Movilidad</label>
 		                <select class="form-control" name="movilidad" id="movilidad">
+		                	<option></option>
 			                  <option value = "1"> 1 (Poco Satisfecho)</option>
 			                  <option>2</option>
 			                  <option>3</option>
@@ -455,6 +468,7 @@
 		            <div class="col-4">
 		                <label for="calidad_vida">Calidad de vida</label>
 		                <select class="form-control" name="calidad_vida" id="calidad_vida">
+			                  <option></option>
 			                  <option value = "1"> 1 (Poco Satisfecho)</option>
 			                  <option>2</option>
 			                  <option>3</option>
@@ -474,6 +488,7 @@
 		            <div class="col-4">	                
 		                <label for="practicas_democraticas">Prácticas Democráticas</label>
 		                <select class="form-control" name="practicas_democraticas" id="practicas_democraticas">
+			                  <option></option>
 			                  <option value = "1"> 1 (Poco Satisfecho)</option>
 			                  <option>2</option>
 			                  <option>3</option>
@@ -535,7 +550,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Ataques Cardiácos</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="3" > </label></div>	
@@ -545,7 +560,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Hipertensión</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="3" > </label></div>	
@@ -555,7 +570,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Derrames Cerebrales</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="3" > </label></div>	
@@ -565,7 +580,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gastritis Crónica</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="3" > </label></div>	
@@ -575,7 +590,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Cáncer</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="3" > </label></div>	
@@ -621,7 +636,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gripas o Resfriados</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="3" > </label></div>	
@@ -633,7 +648,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gastritis</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="3" > </label></div>	
@@ -645,19 +660,19 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Jaquecas</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="0" checked> </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="Jaquecas"  value="1" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="Jaquecas"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="Jaquecas"  value="3" > </label></div>	
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="Jaquecas"  value="4" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="Jaquecas"  value="5" > </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="0" > </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="1" > </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="2" > </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="4" > </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="5" > </label></div>
 				        <div class="col-2"></div>					
 			        </div>	
 			        <div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Insomnio</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="3" > </label></div>	
@@ -669,7 +684,7 @@
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Ansiedad</label>
 				        <div class="col-1"></div>				        
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="0" checked> </label></div>
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="2" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="3" > </label></div>	
@@ -687,6 +702,7 @@
 		            <div class="col-10">	                
 		                <label for="visitas_doctor">¿Cuántas veces ha visitado un doctor, ido a urgencias, o sido atendido por médicos a domicilio en los últimos <b>6 meses</b>?</label>
 		                <select class="form-control" name="visitas_doctor" id="visitas_doctor">
+			                  <option></option>
 			                  <option value = "0"> 0 Veces </option>
 			                  <option value = "1"> 1 a 2 Veces </option>
 			                  <option value = "3"> 2 a 4 Veces </option>
@@ -711,14 +727,14 @@
 		            <div class="col-5">	                
 	  					<label for="gastos_medicamentos">¿Cuánto dinero a gastado en medicamentos en el <b>último mes?</b></label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0"  min = "0"  name="gastos_medicamentos" id="gastos_medicamentos">  				
+	   					 <input class="form-control" type="number" value=""  min = "0"  name="gastos_medicamentos" id="gastos_medicamentos">  				
 						</div>
 		            </div>
 
 					<div class="col-5">	                
-	  					<label for="dias_incapacitado">¿Cuántos <b>días</b> ha estado incapacitado en los últimos 3 meses</label>  					
+	  					<label for="dias_incapacitado">¿Cuántos <b>días</b> ha estado incapacitado en los últimos 3 meses?</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0"   min = "0"  max = "100"  name="dias_incapacitado" id="dias_incapacitado">  				
+	   					 <input class="form-control" type="number" value=""   min = "0"  max = "100"  name="dias_incapacitado" id="dias_incapacitado">  				
 						</div>
 		            </div>
 
@@ -756,6 +772,7 @@
 		            <div class="col-10">	                
 		                <label for="ruido_exterior_suenho">¿Que tan seguido siente que el ruido exterior interrumpe o afecta su sueño?</label>
 		                <select class="form-control" name="ruido_exterior_suenho" id="ruido_exterior_suenho">
+			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
 			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
@@ -779,6 +796,7 @@
 		            <div class="col-10">	                
 		                <label for="suenho_rutina">¿Que tan seguido siente que la falta de sueño afecta su rutina diaria?</label>
 		                <select class="form-control" name="suenho_rutina" id="suenho_rutina">
+			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
 			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
@@ -802,6 +820,7 @@
 		            <div class="col-10">	                
 		                <label for="pagar_uber_taxi">¿Qué tan seguido tiene que pagar un taxi/Uber por que se la hace tarde en las mañanas?</label>
 		                <select class="form-control" name="pagar_uber_taxi" id="pagar_uber_taxi">
+			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
 			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
@@ -834,19 +853,19 @@
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Barrio</label>
-					    <div class="col-2"><input class="form-control" type="number" value="1"  min = "1" max = "10"  name="ruido_barrio" id="ruido_barrio"> </div>	
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10"  name="ruido_barrio" id="ruido_barrio"> </div>	
 						<div class="col-4"></div>			
 					</div>
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Transporte Público</label>
-					    <div class="col-2"><input class="form-control" type="number" value="1"  min = "1" max = "10" name="ruido_transporte_publico" id="ruido_transporte_publico"> </div>	
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_transporte_publico" id="ruido_transporte_publico"> </div>	
 						<div class="col-4"></div>			
 					</div>
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Bogotá</label>
-					    <div class="col-2"><input class="form-control" type="number" value="1"  min = "1" max = "10" name="ruido_bogota" id="ruido_bogota"> </div>	
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_bogota" id="ruido_bogota"> </div>	
 						<div class="col-4"></div>			
 					</div>										
 								        	        				        			        	        			        			        				        			        	       
@@ -885,12 +904,13 @@
 		            <div class="col-10">	                
 		                <label for="ejercicio_semana">En la última semana ¿Cuántos días realizó ejercicio una o más horas?</label>
 		                <select class="form-control" name="ejercicio_semana" id="ejercicio_semana">
+			                  <option></option>
 			                  <option value = "0">No realizo</option>
 			                  <option value = "1"> 1 Día </option>
-			                  <option value = "2"> 2 Día </option>
-			                  <option value = "3"> 3 Día </option>
-			                  <option value = "4"> 4 Día </option>
-			                  <option value = "5"> 5 Día o Más </option>
+			                  <option value = "2"> 2 Días </option>
+			                  <option value = "3"> 3 Días </option>
+			                  <option value = "4"> 4 Días </option>
+			                  <option value = "5"> 5 Días o Más </option>
 		                </select>
 		            </div>
 		            <div class="col-1"></div>          
@@ -910,6 +930,7 @@
 		            <div class="col-10">	                
 		                <label for="parques">¿Qué tan frecuentemente utiliza los parques públicos y zonas verdes de la ciudad para ejercitarse, realizar un deporte o divertirse?</label>
 		                <select class="form-control" name="parques" id="parques">
+			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
 			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
@@ -1016,22 +1037,22 @@
 
 		            <div class="col-2">	                
 		                <label for="dias_caminata">Caminata</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_caminata" id="dias_caminata">
+		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_caminata" id="dias_caminata">
 		            </div>
 					<div class="col-2">	                
 		                <label for="dias_bicicleta">Bicicleta</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_bicicleta" id="dias_bicicleta">
+		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_bicicleta" id="dias_bicicleta">
 		            </div>           
 
 		            <div class="col-2">	                
 		                <label for="dias_transmilenio">Transmilenio</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_transmilenio" id="dias_transmilenio">
+		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_transmilenio" id="dias_transmilenio">
 		            </div>
 
 
 					<div class="col-2">	                
 		                <label for="dias_uber">Uber</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_uber" id="dias_uber">
+		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_uber" id="dias_uber">
 		            </div>		 	
      
 
@@ -1052,21 +1073,21 @@
 
 					<div class="col-2">	                
 		                <label for="dias_taxi">Taxi</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_taxi" id="dias_taxi">
+		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_taxi" id="dias_taxi">
 		            </div>							
 
 		            <div class="col-2">	                
 		                <label for="dias_bus">Bus/Buseta</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_bus" id="dias_bus">
+		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_bus" id="dias_bus">
 		            </div>
 					<div class="col-2">	                
 		                <label for="dias_sitp">SITP</label>
-		                <input class="form-control" type="number" value = "0"  min = "0" max = "7" value=0"" name="dias_sitp" id="dias_sitp">
+		                <input class="form-control" type="number" min = "0" max = "7" value="" name="dias_sitp" id="dias_sitp">
 		            </div>           
 
 		            <div class="col-2">	                
 		                <label for="dias_carro">Carro Particular</label>
-		                <input class="form-control" type="number" value = "0" min = "0" max = "7" value=0"" name="dias_carro" id="dias_carro">
+		                <input class="form-control" type="number" min = "0" max = "7" value="" name="dias_carro" id="dias_carro">
 		            </div>  
 
 		            <div class="col-2"></div>          
@@ -1108,14 +1129,14 @@
 		            <div class="col-4">	                
 	  					<label for="numero_atracos">En el último año ¿Cuántas veces ha sufrido de hurtos o atracos? </label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" min = "0" name="numero_atracos" id="numero_atracos">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="numero_atracos" id="numero_atracos">  				
 						</div>
 		            </div>
 
 					<div class="col-3">	                
 	  					<label for="dinero_atracos">Valor en dinero aproximado de la perdida:</label>  					
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="0" min = "0" name="dinero_atracos" id="dinero_atracos">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="dinero_atracos" id="dinero_atracos">  				
 						</div>
 		            </div>
 
@@ -1293,7 +1314,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa calidad de vida, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1317,7 +1338,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa el entorno ambiental de su vida, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1343,7 +1364,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa la cultura ciudadana de su entorno, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1369,7 +1390,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa sus propias prácticas democráticas, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1395,7 +1416,7 @@
 					<div class="col-5"></div>
 	            	<div class="col-2">
 	            		<div class="form-group">	            		
-							<button class="btn btn-success"> <span class="glyphicon glyphicon-upload" ></span>Enviar Encuesta</button>				    
+							<input type="submit"  class="btn btn-success" value="Enviar Encuesta">			    
 						</div>
 					</div>
 					<div class="col-5"></div>
@@ -1416,9 +1437,11 @@
 			<div class="container">
 		       <div class="text-left">
 		       		<h3>Información de Movilidad</h3>
-		       		<p class="lead">Por favor suba el archivo .json con las ubicaciones.</p>
+		       		<p class="lead">Por favor suba el archivo .json con las ubicaciones.<br/>
+		       		<strong> Importante: </strong> Este proceso toma entre 3 y 5 minutos. Por favor espere hasta recibir confirmación. </p>
 		       </div>
 	     	</div>
+
 
 			<div class="container">
 				<div class="row">
@@ -1426,7 +1449,7 @@
 	            	<div class="col-8">	            		
 					    <label for="name">Archivo .json: </label>						
 					    <div class="form-group">
-					     	<input type="file" name="json_file" id="json_file" required="True" class="form-control">						    
+					     	<input type="file" id = "json_file" name="json_file" id="json_file" class="form-control">						    
 					     </div>
 					</div>
 					<div class="col-2"></div>
@@ -1446,7 +1469,7 @@
 					<div class="col-5"></div>
 	            	<div class="col-2">
 	            		<div class="form-group">	            		
-							<button class="btn btn-success"> <span class="glyphicon glyphicon-upload" ></span>Enviar JSON</button>				    
+							<input type="submit"  id='send_json_button' class="btn btn-success" value="Enviar JSON">
 						</div>
 					</div>
 					<div class="col-5"></div>
