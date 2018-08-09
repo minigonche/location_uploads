@@ -113,7 +113,7 @@ def upload_info(request):
 			data['student_id'] = student_id
 			data['interview_id'] = interview_id
 
-			ps.save_json(json_obj = data, name = student_id + '_' + interview_id)
+			ps.save_json(json_obj = data, name = interview_id)
 
 			data['envio'] = 'archivo json'
 			data['por_enviar'] = 'la encuesta'

@@ -43,15 +43,20 @@ while(True):
 
 				if not file_name.endswith('.json'):
 					write_to_log('Found: ' + file_name + ' which is not a JSON. Deleting file...')
-					os.remove(location + file_name)
+					os.remove(json_location + file_name)
 				else:
-					json_file = open(location + file_name, 'r')
+					json_file = open(json_location + file_name, 'r')
 					data = json.load(json_file)
 
+					if('interview_id' in data.keys()):
+						interview_id = data['interview_id']
+					else:
+						interview_id = file_name.split('.')[0]
+
 					write_to_log('Exporting: ' + file_name )
-					rows = ps.export_json(data['interview_id'], data)
+					rows = ps.export_json(interview_id, data)
 					write_to_log( 'Done. Added: ' + str(rows) + ' records to database. Deleting file...')
-					os.remove(location + file_name)
+					os.remove(json_location + file_name)
 
 	except Exception as e:
 	    write_to_log('-----------------')
