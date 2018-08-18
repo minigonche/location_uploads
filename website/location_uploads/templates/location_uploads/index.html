@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -26,11 +26,11 @@
     			document.getElementById("tipo_encuesta").value = "json"
     			document.getElementById("json_file").required = true;
 			}
-		
+
 	</script>
 
 
-	
+
   </head>
 
 	<body>
@@ -47,7 +47,7 @@
 
     <div class="container">
        <div class="text-left">
-        <h2>Descripción</h2>        
+        <h2>Descripción</h2>
      </div>
 
       <div class="py-5">
@@ -63,20 +63,20 @@
 	    		<dd>- alejandro.feged@urosario.edu.co</dd>
 	    		<dd>- andres.sampayo@urosario.edu.co</dd>
 	    		<dd>- guibor.camargo@urosario.edu.co</dd>
-  		</dl>     
+  		</dl>
 
   		<br>
 		<dl>
 	    	<dt>Telefonos</dt>
 	    		<dd>- 2970200 ext. 3718</dd>
-  		</dl> 
-		
+  		</dl>
+
       </div>
     </div>
 
 
 
-	<form action="{% url 'location_uploads:upload_info' %}" method="POST" enctype="multipart/form-data" class="form-horizontal" id = 'central_form'> 
+	<form action="{% url 'location_uploads:upload_info' %}" method="POST" enctype="multipart/form-data" class="form-horizontal" id = 'central_form'>
 	{% csrf_token %}
 
 
@@ -85,12 +85,12 @@
 
 		<div class="container">
 	       <div class="text-left">
-	        	<h3>Información del Estudiante Referencia</h3>        
+	        	<h3>Información del Estudiante Referencia</h3>
 	       </div>
      	</div>
 
      	<div class="container">
-	      <div class="py-1 text-center">	      
+	      <div class="py-1 text-center">
 	        <p class="lead"> </p>
 	      </div>
     	</div>
@@ -101,8 +101,8 @@
 				<div class="col-2"></div>
 				<div class="col-8">
 					<label for="carnet">Carnet del Estudiante</label>
-				 	<div class="form-group">    				
-    					<input type="text" class="form-control" id="carnet" name="carnet" placeholder="Ingrese el número de carnet que le solicitó llenar esta encuesta" required="True">    				
+				 	<div class="form-group">
+    					<input type="text" class="form-control" id="carnet" name="carnet" placeholder="Ingrese el número de carnet que le solicitó llenar esta encuesta" required="True">
   					</div>
   				</div>
   				<div class="col-2"></div>
@@ -111,8 +111,8 @@
 				<div class="col-2"></div>
 				<div class="col-8">
 					<label for="id_entrevistado">Id del Entrevistado</label>
-				 	<div class="form-group">    				
-    					<input type="text" class="form-control" id="id_entrevistado" name="id_entrevistado" placeholder="Ingerese la identificación del entrevistado" required="True">    				
+				 	<div class="form-group">
+    					<input type="text" class="form-control" id="id_entrevistado" name="id_entrevistado" placeholder="Ingerese la identificación del entrevistado" required="True">
   					</div>
   				</div>
   				<div class="col-2"></div>
@@ -122,16 +122,16 @@
 		</div>
 
 			<!-- Valor escondido para saber que formulario esta llenando -->
-		<div style = "display:none">				
+		<div style = "display:none">
 				    <select class="form-control" name="tipo_encuesta" id="tipo_encuesta">
 		                  <option value="ninguna">Ninguna</option>
 		                  <option value="informacion">Informacion</option>
-		                  <option value="json">JSON</option>			                                    
-	                </select>  				
+		                  <option value="json">JSON</option>
+	                </select>
 		</div>
 
 		<div class="container">
-	      <div class="py-3 text-center">	      
+	      <div class="py-3 text-center">
 	        <p class="lead"> </p>
 	      </div>
     	</div>
@@ -150,7 +150,7 @@
     	</div>
 
     	<div class="container">
-	      <div class="py-1 text-center">	      
+	      <div class="py-1 text-center">
 	        <p class="lead"> </p>
 	      </div>
     	</div>
@@ -160,7 +160,7 @@
     	<div id="subir_encuesta" style = "display:none">
 			<div class="container">
 		       <div class="text-left">
-		        	<h3>Información del Encuestado</h3>        
+		        	<h3>Información del Encuestado</h3>
 		       </div>
 	     	</div>
 
@@ -169,12 +169,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Información Básica</h5>   	        	
+		       		<h5>Información Básica</h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -183,10 +183,10 @@
 	     	<div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
-	  					<label for="edad">Edad</label>  					
+		            <div class="col-4">
+	  					<label for="edad">Edad</label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" placeholder = "Ingrese su Edad" min = "1" max = "120" name="edad" id="edad">  				
+	   					 <input class="form-control" type="number" placeholder = "Ingrese su Edad" min = "1" max = "120" name="edad" id="edad">
 						</div>
 		            </div>
 
@@ -198,11 +198,11 @@
 			                  <option>En Pareja</option>
 			                  <option value="En Union Libre">En Unión Libre</option>
 			                  <option>Divorciado o Divorciada</option>
-			                  <option>Viudez</option>		                  
+			                  <option>Viudez</option>
 		                </select>
-		            </div>    
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -225,12 +225,12 @@
 
 		            <div class="col-4">
 						<label for="twitter">Usuario Twitter</label>
-					 	<div class="form-group">    				
-	    					<input type="text" class="form-control" id="twitter" name="twitter" placeholder="Ingrese su usuario de twitter">    				
+					 	<div class="form-group">
+	    					<input type="text" class="form-control" id="twitter" name="twitter" placeholder="Ingrese su usuario de twitter">
 	  					</div>
-		            </div>    
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -238,10 +238,10 @@
 			<div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
-	  					<label for="hijos">Número de Hijos</label>  					
+		            <div class="col-4">
+	  					<label for="hijos">Número de Hijos</label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" placeholder = "Ingrese su Número de Hijos" min="0" max = "12" name="hijos" id="hijos">  				
+	   					 <input class="form-control" type="number" placeholder = "Ingrese su Número de Hijos" min="0" max = "12" name="hijos" id="hijos">
 						</div>
 		            </div>
 
@@ -250,13 +250,18 @@
 		                <select class="form-control" name="vive" id="vive">
 		                	  <option></option>
 			                  <option>Solo</option>
-			                  <option>Con sus padres</option>
-			                  <option value="Pareja-hijos">Pareja y/o hijos</option>
-			                  <option>Otro</option>		                  
+			                  <option>Con Sus Padres</option>
+			                  <option value="Pareja-Hijos">Pareja y/o hijos</option>
+			                  <option>Amigos</option>
+			                  <option value="Hermanos">Hermanos/Hermanas</option>
+			                  <option>Familiares</option>
+			                  <option>Comunidad Religiosa</option>
+			                  <option>Residencia Estudiantil</option>
+			                  <option>Otro</option>
 		                </select>
-		            </div>    
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -266,8 +271,8 @@
 					<div class="col-2"></div>
 					<div class="col-8">
 						<label for="ocupacion">Ocupación</label>
-					 	<div class="form-group">    				
-	    					<input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="¿Cuál es su ocupación?">    				
+					 	<div class="form-group">
+	    					<input type="text" class="form-control" id="ocupacion" name="ocupacion" placeholder="¿Cuál es su ocupación?">
 	  					</div>
 	  				</div>
 	  				<div class="col-2"></div>
@@ -281,8 +286,8 @@
 					<div class="col-2"></div>
 					<div class="col-8">
 						<label for="direccion">Dirección</label>
-					 	<div class="form-group">    				
-	    					<input type="text" class="form-control" id="direccion" name="direccion" placeholder="¿Cuál es su dirección?">    				
+					 	<div class="form-group">
+	    					<input type="text" class="form-control" id="direccion" name="direccion" placeholder="¿Cuál es su dirección?">
 	  					</div>
 	  				</div>
 	  				<div class="col-2"></div>
@@ -295,21 +300,21 @@
 					<div class="col-2"></div>
 					<div class="col-4">
 						<label for="barrio">Barrio</label>
-					 	<div class="form-group">    				
-	    					<input type="text" class="form-control" id="barrio" name="barrio" placeholder="¿Cuál es su barrio?">    				
+					 	<div class="form-group">
+	    					<input type="text" class="form-control" id="barrio" name="barrio" placeholder="¿Cuál es su barrio?">
 	  					</div>
-		            </div>    
+		            </div>
 		            <div class="col-4">
 		                <label for="vivienda">Tipo de Vivienda</label>
 		                <select class="form-control" name="vivienda" id="vivienda">
 		                	<option></option>
 		                  <option>Apartamento/Apartaestudio</option>
 		                  <option>Casa</option>
-		                  <option>Conjunto cerrado de Casas</option>		                  
+		                  <option>Conjunto cerrado de Casas</option>
 		                </select>
 		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -321,72 +326,51 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Ingresos y Gastos</h5>   	        	
+		       		<h5>Ingresos y Gastos</h5>
+              <p class="lead">Responda las siguientes preguntas de dinero en miles de pesos colombianos (COP) </p>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
 
-
-	    	<div class = "container">
+        <div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-5">	                
-	  					<label for="gastos_transporte">¿Cuánto es su gasto semanal en transporte?</label>  					
-	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="" min = "0" name="gastos_transporte" id="gastos_transporte">  				
-						</div>
-		            </div>
+		            <div class="col-10">
+                  <div calss='row'>
+                    <div class="form-group form-inline">
+                        <label>¿Cuánto es su gasto semanal en transporte? &nbsp &nbsp  </label>
+                        <input style="text-align:right;" class="form-control" type="number" value="" min = "0" name="gastos_transporte" id="gastos_transporte"> &nbsp 000 COP
+                    </div>
+                    <div class="form-group form-inline">
+	  					           <label for="gastos_alimentacion">¿Cuánto es su gasto semanal en alimentación? &nbsp &nbsp  </label>
+                        <input style="text-align:right;" class="form-control" type="number" value="" min = "0" name="gastos_alimentacion" id="gastos_alimentacion"> &nbsp 000 COP
+                    </div>
+                    <div class="form-group form-inline">
+                         <label for="gastos_seguridad_social">¿Cuánto paga de seguridad social (salud, pensión y ARL) al mes? &nbsp &nbsp  </label>
+                        <input style="text-align:right;" class="form-control" type="number" value=""  min = "0" name="gastos_seguridad_social" id="gastos_seguridad_social"> &nbsp 000 COP
+                    </div>
+                    <div class="form-group form-inline">
+                         <label for="gastos_porcentaje_ahorro">Por lo general ¿Qué porcentaje de sus ingresos ahorra al mes? &nbsp &nbsp </label>
+                        <input style="text-align:right;" class="form-control" type="number" value=""  min = "0"  max = "100" name="gastos_porcentaje_ahorro" id="gastos_porcentaje_ahorro"> &nbsp %
+                    </div>
+                    <div class="form-group form-inline">
+                         <label for="gastos_total">Aproximadamente ¿Cuánto es su gasto total en un mes? &nbsp &nbsp</label>
+                        <input class="form-control" type="number" value="" name="gastos_total"  min = "0"  id="gastos_total"> &nbsp 000 COP
+                    </div>
+                 </div>
+                </div>
 
-					<div class="col-5">	                
-	  					<label for="gastos_alimentacion">¿Cuánto es su gasto semanal en alimentación?</label>  					
-	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="" min = "0" name="gastos_alimentacion" id="gastos_alimentacion">  				
-						</div>
-		            </div>
+		            <div class="col-1"></div>
+	      </div>
+			 </div>
 
-		            <div class="col-1"></div>          
-	            </div>
-			</div>
 
-			<div class = "container">
-				<div class="row">
-					<div class="col-1"></div>
-		            <div class="col-5">	                
-	  					<label for="gastos_seguridad_social">¿Cuánto paga de seguridad social (salud, pensión y ARL) al mes?</label>  					
-	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value=""  min = "0" name="gastos_seguridad_social" id="gastos_seguridad_social">  				
-						</div>
-		            </div>
 
-					<div class="col-5">	                
-	  					<label for="gastos_porcentaje_ahorro">Por lo general ¿Qué porcentaje de sus ingresos ahorra al mes?</label>  					
-	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value=""  min = "0"  max = "100" name="gastos_porcentaje_ahorro" id="gastos_porcentaje_ahorro">  				
-						</div>
-		            </div>
-
-		            <div class="col-1"></div>          
-	            </div>
-			</div>
-
-			<div class = "container">
-				<div class="row">
-					<div class="col-1"></div>
-					<div class="col-5">	                
-	  					<label for="gastos_total">Aproximadamente ¿Cuánto es su gasto total en un mes?</label>  					
-	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="" name="gastos_total"  min = "0"  id="gastos_total">  				
-						</div>
-		            </div>
-
-		            <div class="col-6"></div>          
-	            </div>
-			</div>
 
 
 
@@ -396,7 +380,7 @@
 
 
 			<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -404,14 +388,14 @@
 			<div class="container">
 		       <div class="text-left">
 		       		<h5>Bienestar</h5>
-		       		<p class="lead">A grandes rasgos, describa qué tan satisfecho se siente actualmente en su vida como ciudadano en las siguientes categorías, (como usted las entienda) </p>	       		
+		       		<p class="lead">A grandes rasgos, describa qué tan satisfecho se siente actualmente en su vida como ciudadano en las siguientes categorías, (como usted las entienda) </p>
 		       </div>
 	     	</div>
 
 
 
 		     <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -420,7 +404,7 @@
 		    <div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
+		            <div class="col-4">
 		                <label for="cultura_ciudadana">Cultura Ciudadana</label>
 		                <select class="form-control" name="cultura_ciudadana" id="cultura_ciudadana">
 		                	  <option></option>
@@ -428,7 +412,7 @@
 			                  <option>2</option>
 			                  <option>3</option>
 			                  <option>4</option>
-			                  <option value = "5">5 (Muy Satisfecho)</option>		                  
+			                  <option value = "5">5 (Muy Satisfecho)</option>
 		                </select>
 		            </div>
 
@@ -440,11 +424,11 @@
 			                  <option>2</option>
 			                  <option>3</option>
 			                  <option>4</option>
-			                  <option value = "5">5 (Muy Satisfecho)</option>		                  
+			                  <option value = "5">5 (Muy Satisfecho)</option>
 		                </select>
-		            </div>    
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -453,7 +437,7 @@
 			<div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
+		            <div class="col-4">
 		                <label for="movilidad">Movilidad</label>
 		                <select class="form-control" name="movilidad" id="movilidad">
 		                	<option></option>
@@ -461,7 +445,7 @@
 			                  <option>2</option>
 			                  <option>3</option>
 			                  <option>4</option>
-			                  <option value = "5">5 (Muy Satisfecho)</option>		                  
+			                  <option value = "5">5 (Muy Satisfecho)</option>
 		                </select>
 		            </div>
 
@@ -473,11 +457,11 @@
 			                  <option>2</option>
 			                  <option>3</option>
 			                  <option>4</option>
-			                  <option value = "5">5 (Muy Satisfecho)</option>		                  
+			                  <option value = "5">5 (Muy Satisfecho)</option>
 		                </select>
-		            </div>    
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
@@ -485,7 +469,7 @@
 			<div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
+		            <div class="col-4">
 		                <label for="practicas_democraticas">Prácticas Democráticas</label>
 		                <select class="form-control" name="practicas_democraticas" id="practicas_democraticas">
 			                  <option></option>
@@ -493,15 +477,15 @@
 			                  <option>2</option>
 			                  <option>3</option>
 			                  <option>4</option>
-			                  <option value = "5">5 (Muy Satisfecho)</option>		                  
+			                  <option value = "5">5 (Muy Satisfecho)</option>
 		                </select>
 		            </div>
-		            <div class="col-6"></div>          
+		            <div class="col-6"></div>
 	            </div>
 			</div>
 
 	     	<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -514,12 +498,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Salúd</h5>   	        	
+		       		<h5>Salúd</h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -529,81 +513,81 @@
 
 	     		<div class = "row">
 	     			<div class="col-1"></div>
-	     			<div class="col-10"> 
-	     				<p>Estamos interesados en conocer su estado de salud. En el cuadro a continuación indique la cantidad de veces que a sufrido de lo siguiente <b>A LO LARGO DE SU VIDA.</b></p>	       	
+	     			<div class="col-10">
+	     				<p>Estamos interesados en conocer su estado de salud. En el cuadro a continuación indique la cantidad de veces que a sufrido de lo siguiente <b>A LO LARGO DE SU VIDA.</b></p>
 	     			</div>
 	     			<div class="col-1"></div>
 	     		</div>
-					     		
+
 				<div class="form-group">
 					<div class = "row">
 						<div class="col-1"></div>
 					    <label class="col-2 control-label text-lg-center font-weight-bold">Aficción</label>
-					    <div class="col-1"></div>			
+					    <div class="col-1"></div>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Nunca</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">1 Vez</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">2 Veces</label>
 						<label class="col-2 control-label text-lg-left font-weight-bold">3 Veces o más</label>
-						<div class="col-3"></div>			
+						<div class="col-3"></div>
 					</div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Ataques Cardiácos</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="3" > </label></div>	
-				        <div class="col-4"></div>					
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ataques_cardiacos"  value="3" > </label></div>
+				        <div class="col-4"></div>
 			        </div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Hipertensión</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="3" > </label></div>	
-				        <div class="col-4"></div>					
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="hipertension"  value="3" > </label></div>
+				        <div class="col-4"></div>
 			        </div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Derrames Cerebrales</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="3" > </label></div>	
-				        <div class="col-4"></div>					
-			        </div>		
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="derrames_cerebrales"  value="3" > </label></div>
+				        <div class="col-4"></div>
+			        </div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gastritis Crónica</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="3" > </label></div>	
-				        <div class="col-4"></div>					
-			        </div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis_cronica"  value="3" > </label></div>
+				        <div class="col-4"></div>
+			        </div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Cáncer</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="3" > </label></div>	
-				        <div class="col-4"></div>					
-			        </div>					        			        	        
-			    </div>	    	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="cancer"  value="3" > </label></div>
+				        <div class="col-4"></div>
+			        </div>
+			    </div>
 
-			</div>    
+			</div>
 
 
 
 			<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -613,93 +597,93 @@
 
 	     		<div class = "row">
 	     			<div class="col-1"></div>
-	     			<div class="col-10"> 
-	     				<p>En el siguiente recuadro indique las veces que a sufrido <b>EN LOS ULTIMOS TRES MESES</b> de las siguientes aflicciones comunes.</p>	       	
+	     			<div class="col-10">
+	     				<p>En el siguiente recuadro indique las veces que a sufrido <b>EN LOS ULTIMOS TRES MESES</b> de las siguientes aflicciones comunes.</p>
 	     			</div>
 	     			<div class="col-1"></div>
 	     		</div>
-					     		
+
 				<div class="form-group">
 					<div class = "row">
 						<div class="col-1"></div>
 					    <label class="col-2 control-label text-lg-center font-weight-bold">Aficción</label>
-					    <div class="col-1"></div>			
+					    <div class="col-1"></div>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Nunca</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">1 Vez</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">2 Veces</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">3 Veces</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">4 Veces</label>
 						<label class="col-2 control-label text-lg-left font-weight-bold">5 Veces o más</label>
-						<div class="col-1"></div>			
+						<div class="col-1"></div>
 					</div>
 					<div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gripas o Resfriados</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="3" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="4" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gripas_refriados"  value="5" > </label></div>
-				        <div class="col-2"></div>					
+				        <div class="col-2"></div>
 			        </div>
 			        <div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Gastritis</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="3" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="4" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="gastritis"  value="5" > </label></div>
-				        <div class="col-2"></div>					
-			        </div>	
+				        <div class="col-2"></div>
+			        </div>
 			        <div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Jaquecas</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="3" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="4" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="jaquecas"  value="5" > </label></div>
-				        <div class="col-2"></div>					
-			        </div>	
+				        <div class="col-2"></div>
+			        </div>
 			        <div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Insomnio</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="3" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="4" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="insomnio"  value="5" > </label></div>
-				        <div class="col-2"></div>					
-			        </div>			
+				        <div class="col-2"></div>
+			        </div>
 			        <div class = "row">
 						<div class="col-1"></div>
 				        <label class="col-2 control-label text-center">Ansiedad</label>
-				        <div class="col-1"></div>				        
+				        <div class="col-1"></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="0" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="1" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="2" > </label></div>
-				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="3" > </label></div>	
+				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="3" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="4" > </label></div>
 				        <div class="col-1"><label class="radio-inline"> <input type="radio" name="ansiedad"  value="5" > </label></div>
-				        <div class="col-2"></div>					
-			        </div>					        	        				        			        	        			        			        				        			        	        
-			    </div>	    	
+				        <div class="col-2"></div>
+			        </div>
+			    </div>
 
-			</div> 
+			</div>
 
 			<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="visitas_doctor">¿Cuántas veces ha visitado un doctor, ido a urgencias, o sido atendido por médicos a domicilio en los últimos <b>6 meses</b>?</label>
 		                <select class="form-control" name="visitas_doctor" id="visitas_doctor">
 			                  <option></option>
@@ -707,16 +691,16 @@
 			                  <option value = "1"> 1 a 2 Veces </option>
 			                  <option value = "3"> 2 a 4 Veces </option>
 			                  <option value = "5"> 4 a 6 Veces </option>
-			                  <option value = "8"> 6 a 10 Veces</option>		                  
-			                  <option value = "10"> Más de 10 Veces</option>		                  
+			                  <option value = "8"> 6 a 10 Veces</option>
+			                  <option value = "10"> Más de 10 Veces</option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
-			</div>  
+			</div>
 
 			<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -724,26 +708,26 @@
 	    	<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-5">	                
-	  					<label for="gastos_medicamentos">¿Cuánto dinero a gastado en medicamentos en el <b>último mes?</b></label>  					
+		            <div class="col-5">
+	  					<label for="gastos_medicamentos">¿Cuánto dinero a gastado en medicamentos en el <b>último mes?</b></label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value=""  min = "0"  name="gastos_medicamentos" id="gastos_medicamentos">  				
+	   					 <input class="form-control" type="number" value=""  min = "0"  name="gastos_medicamentos" id="gastos_medicamentos">
 						</div>
 		            </div>
 
-					<div class="col-5">	                
-	  					<label for="dias_incapacitado">¿Cuántos <b>días</b> ha estado incapacitado en los últimos 3 meses?</label>  					
+					<div class="col-5">
+	  					<label for="dias_incapacitado">¿Cuántos <b>días</b> ha estado incapacitado en los últimos 3 meses?</label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value=""   min = "0"  max = "100"  name="dias_incapacitado" id="dias_incapacitado">  				
+	   					 <input class="form-control" type="number" value=""   min = "0"  max = "100"  name="dias_incapacitado" id="dias_incapacitado">
 						</div>
 		            </div>
 
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
 			</div>
 
 	     	<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -756,12 +740,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Contaminación Auditiva</h5>   	        	
+		       		<h5>Contaminación Auditiva</h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -769,23 +753,23 @@
 	    	<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="ruido_exterior_suenho">¿Que tan seguido siente que el ruido exterior interrumpe o afecta su sueño?</label>
 		                <select class="form-control" name="ruido_exterior_suenho" id="ruido_exterior_suenho">
 			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
-			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
+			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>
 			                  <option value = "muy_seguido"> Muy Seguido </option>
 			                  <option value = "siempre"> Siempre </option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
-			</div> 
+			</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -793,47 +777,47 @@
 			<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="suenho_rutina">¿Que tan seguido siente que la falta de sueño afecta su rutina diaria?</label>
 		                <select class="form-control" name="suenho_rutina" id="suenho_rutina">
 			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
-			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
+			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>
 			                  <option value = "muy_seguido"> Muy Seguido </option>
 			                  <option value = "siempre"> Siempre </option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
 			</div>
 
 			<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
-	    	</div> 
+	    	</div>
 
 			<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="pagar_uber_taxi">¿Qué tan seguido tiene que pagar un taxi/Uber por que se la hace tarde en las mañanas?</label>
 		                <select class="form-control" name="pagar_uber_taxi" id="pagar_uber_taxi">
 			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
-			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
+			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>
 			                  <option value = "muy_seguido"> Muy Seguido </option>
 			                  <option value = "siempre"> Siempre </option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
-			</div> 
+			</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -843,42 +827,42 @@
 
 	     		<div class = "row">
 	     			<div class="col-1"></div>
-	     			<div class="col-10"> 
-	     				<p>Según usted, en una escala de 1 a 10 ¿qué tan ruidos son estos espacios?</p>	       	
+	     			<div class="col-10">
+	     				<p>Según usted, en una escala de 1 a 10 (siendo 1 muy silencioso y 10 muy ruidoso) ¿qué tan ruidos son estos espacios?</p>
 	     			</div>
 	     			<div class="col-1"></div>
 	     		</div>
-					     		
+
 				<div class="form-group">
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Barrio</label>
-					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10"  name="ruido_barrio" id="ruido_barrio"> </div>	
-						<div class="col-4"></div>			
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10"  name="ruido_barrio" id="ruido_barrio"> </div>
+						<div class="col-4"></div>
 					</div>
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Transporte Público</label>
-					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_transporte_publico" id="ruido_transporte_publico"> </div>	
-						<div class="col-4"></div>			
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_transporte_publico" id="ruido_transporte_publico"> </div>
+						<div class="col-4"></div>
 					</div>
 					<div class = "row">
 						<div class="col-4"></div>
 					    <label class="col-2 control-label text-lg-center">Bogotá</label>
-					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_bogota" id="ruido_bogota"> </div>	
-						<div class="col-4"></div>			
-					</div>										
-								        	        				        			        	        			        			        				        			        	       
-			    </div>	    	
+					    <div class="col-2"><input class="form-control" type="number" value=""  min = "1" max = "10" name="ruido_bogota" id="ruido_bogota"> </div>
+						<div class="col-4"></div>
+					</div>
 
-			</div> 	    	
+			    </div>
+
+			</div>
 
 
 			<div class="container">
-			      <div class="py-2 text-center">	      
+			      <div class="py-2 text-center">
 			        <p class="lead"> </p>
 			      </div>
-		    </div>  
+		    </div>
 
 
 		    <!--         			 -->
@@ -888,12 +872,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Espacio Público</h5>   	        	
+		       		<h5>Espacio Público</h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -901,7 +885,7 @@
 	    	<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="ejercicio_semana">En la última semana ¿Cuántos días realizó ejercicio una o más horas?</label>
 		                <select class="form-control" name="ejercicio_semana" id="ejercicio_semana">
 			                  <option></option>
@@ -913,12 +897,12 @@
 			                  <option value = "5"> 5 Días o Más </option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
-			</div> 
+			</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -927,23 +911,23 @@
 	    	<div class = "container">
 				<div class="row">
 					<div class="col-1"></div>
-		            <div class="col-10">	                
+		            <div class="col-10">
 		                <label for="parques">¿Qué tan frecuentemente utiliza los parques públicos y zonas verdes de la ciudad para ejercitarse, realizar un deporte o divertirse?</label>
 		                <select class="form-control" name="parques" id="parques">
 			                  <option></option>
 			                  <option value = "nunca">Nunca</option>
 			                  <option value = "casi_nunca"> Casi Nunca </option>
-			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>			                  
+			                  <option value = "vez_en_cuando"> De Vez en Cuando</option>
 			                  <option value = "muy_seguido"> Muy Seguido </option>
 			                  <option value = "siempre"> Siempre </option>
 		                </select>
 		            </div>
-		            <div class="col-1"></div>          
+		            <div class="col-1"></div>
 	            </div>
-			</div> 
+			</div>
 
 	     	<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -957,12 +941,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5> Transporte </h5>   	        	
+		       		<h5> Transporte </h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -971,53 +955,53 @@
 
 	     		<div class = "row">
 	     			<div class="col-1"></div>
-	     			<div class="col-10"> 
-	     				<p>Por favor llene los siguientes espacios que indican una rutina normal suya en día laboral o de estudio (en formato militar).</p>	       	
+	     			<div class="col-10">
+	     				<p>Por favor llene los siguientes espacios que indican una rutina normal suya en día laboral o de estudio (en formato militar).</p>
 	     			</div>
 	     			<div class="col-1"></div>
 	     		</div>
-					     		
+
 				<div class="form-group">
 					<div class = "row">
 						<div class="col-2"></div>
 					    <label class="col-4 control-label text-lg-center">Hora que se levanta</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23"  placeholder="hh" name="horas_levantar" id="horas_levantar"></div>		
-					    <label class="col- control-label text-lg-center">:</label>				    				    
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_levantar" id="minutos_levantar"> </div>	
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23"  placeholder="hh" name="horas_levantar" id="horas_levantar"></div>
+					    <label class="col- control-label text-lg-center">:</label>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_levantar" id="minutos_levantar"> </div>
 					    <div class="col-4"></div>
 					</div>
 					<div class = "row">
 						<div class="col-2"></div>
 					    <label class="col-4 control-label text-lg-center">Hora en la que sale de su hogar</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_salir_hogar" id="horas_salir_hogar"></div>		
-					    <label class="col- control-label text-lg-center">:</label>				    				    
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_salir_hogar" id="minutos_salir_hogar"> </div>	
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_salir_hogar" id="horas_salir_hogar"></div>
+					    <label class="col- control-label text-lg-center">:</label>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_salir_hogar" id="minutos_salir_hogar"> </div>
 					    <div class="col-4"></div>
 					</div>
 					<div class = "row">
 						<div class="col-2"></div>
 					    <label class="col-4 control-label text-lg-center">Hora que llega a su destino</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_llegar_destino" id="horas_llegar_destino"></div>		
-					    <label class="col- control-label text-lg-center">:</label>				    				    
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_llegar_destino" id="minutos_llegar_destino"> </div>	
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_llegar_destino" id="horas_llegar_destino"></div>
+					    <label class="col- control-label text-lg-center">:</label>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_llegar_destino" id="minutos_llegar_destino"> </div>
 					    <div class="col-4"></div>
-					</div>					
+					</div>
 					<div class = "row">
 						<div class="col-2"></div>
 					    <label class="col-4 control-label text-lg-center">Hora en la que vuelve a su hogar</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_volver_hogar" id="horas_volver_hogar"></div>		
-					    <label class="col- control-label text-lg-center">:</label>				    				    
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_volver_hogar" id="minutos_volver_hogar"> </div>	
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_volver_hogar" id="horas_volver_hogar"></div>
+					    <label class="col- control-label text-lg-center">:</label>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_volver_hogar" id="minutos_volver_hogar"> </div>
 					    <div class="col-4"></div>
 					</div>
-								        	        				        			        	        			        			        				        			        	       
-			    </div>	    	
 
-			</div> 	   
+			    </div>
+
+			</div>
 
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1025,7 +1009,7 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<p >En una semana de trabajo/estudio normal ¿Normalmente cuantos días a la semana utiliza los siguientes medios de transporte para llegar a su destino? </p>	       		
+		       		<p >En una semana de trabajo/estudio normal ¿Normalmente cuantos días a la semana utiliza los siguientes medios de transporte para llegar a su destino? </p>
 		       </div>
 	     	</div>
 
@@ -1035,33 +1019,33 @@
 				<div class="row">
 					<div class="col-2"></div>
 
-		            <div class="col-2">	                
+		            <div class="col-2">
 		                <label for="dias_caminata">Caminata</label>
 		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_caminata" id="dias_caminata">
 		            </div>
-					<div class="col-2">	                
+					<div class="col-2">
 		                <label for="dias_bicicleta">Bicicleta</label>
 		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_bicicleta" id="dias_bicicleta">
-		            </div>           
+		            </div>
 
-		            <div class="col-2">	                
+		            <div class="col-2">
 		                <label for="dias_transmilenio">Transmilenio</label>
 		                <input class="form-control" type="number"   min = "0" max = "7" value="" name="dias_transmilenio" id="dias_transmilenio">
 		            </div>
 
 
-					<div class="col-2">	                
+					<div class="col-2">
 		                <label for="dias_uber">Uber</label>
 		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_uber" id="dias_uber">
-		            </div>		 	
-     
+		            </div>
 
-		            <div class="col-2"></div>          
+
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
 		     <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -1071,36 +1055,36 @@
 				<div class="row">
 					<div class="col-2"></div>
 
-					<div class="col-2">	                
+					<div class="col-2">
 		                <label for="dias_taxi">Taxi</label>
 		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_taxi" id="dias_taxi">
-		            </div>							
+		            </div>
 
-		            <div class="col-2">	                
+		            <div class="col-2">
 		                <label for="dias_bus">Bus/Buseta</label>
 		                <input class="form-control" type="number"  min = "0" max = "7" value="" name="dias_bus" id="dias_bus">
 		            </div>
-					<div class="col-2">	                
+					<div class="col-2">
 		                <label for="dias_sitp">SITP</label>
 		                <input class="form-control" type="number" min = "0" max = "7" value="" name="dias_sitp" id="dias_sitp">
-		            </div>           
+		            </div>
 
-		            <div class="col-2">	                
+		            <div class="col-2">
 		                <label for="dias_carro">Carro Particular</label>
 		                <input class="form-control" type="number" min = "0" max = "7" value="" name="dias_carro" id="dias_carro">
-		            </div>  
+		            </div>
 
-		            <div class="col-2"></div>          
+		            <div class="col-2"></div>
 	            </div>
 			</div>
 
 
 
 	     	<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
-	    	</div>		
+	    	</div>
 
 
 
@@ -1112,12 +1096,12 @@
 
 			<div class="container">
 		       <div class="text-left">
-		       		<h5>Seguridad Ante Delitos</h5>   	        	
+		       		<h5>Seguridad Ante Delitos</h5>
 		       </div>
 	     	</div>
 
 	     	<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1126,27 +1110,27 @@
 	    	<div class = "container">
 				<div class="row">
 					<div class="col-2"></div>
-		            <div class="col-4">	                
-	  					<label for="numero_atracos">En el último año ¿Cuántas veces ha sufrido de hurtos o atracos? </label>  					
+		            <div class="col-4">
+	  					<label for="numero_atracos">En el último año ¿Cuántas veces ha sufrido de hurtos o atracos? </label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="" min = "0" name="numero_atracos" id="numero_atracos">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="numero_atracos" id="numero_atracos">
 						</div>
 		            </div>
 
-					<div class="col-3">	                
-	  					<label for="dinero_atracos">Valor en dinero aproximado de la perdida:</label>  					
+					<div class="col-3">
+	  					<label for="dinero_atracos">Valor en dinero aproximado de la perdida:</label>
 	  					<div class="form-group">
-	   					 <input class="form-control" type="number" value="" min = "0" name="dinero_atracos" id="dinero_atracos">  				
+	   					 <input class="form-control" type="number" value="" min = "0" name="dinero_atracos" id="dinero_atracos">
 						</div>
 		            </div>
 
-		            <div class="col-3"></div>          
+		            <div class="col-3"></div>
 	            </div>
-			</div>	    		
+			</div>
 
 
 			<div class="container">
-		      <div class="py-1 text-center">	      
+		      <div class="py-1 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1157,15 +1141,15 @@
 
 	     		<div class = "row">
 	     			<div class="col-1"></div>
-	     			<div class="col-11"> 
-	     				<p>Qué tan importante son para usted los siguientes temas (organícelos de la “1” a “8” siendo “1” lo más importante y “8” lo menos importante), y que tan importante cree usted que son para las siguientes personas:</p>	       	
-	     			</div>	     			
+	     			<div class="col-11">
+	     				<p>Qué tan importante son para usted los siguientes temas (organícelos de la “1” a “8” siendo “1” lo más importante y “8” lo menos importante), y que tan importante cree usted que son para las siguientes personas:</p>
+	     			</div>
 	     		</div>
-					     		
+
 				<div class="form-group">
-					<div class = "row">		
-						<div class="col-1"></div>				
-					    <label class="col-4 control-label text-lg-center font-weight-bold">Temas</label>					   
+					<div class = "row">
+						<div class="col-1"></div>
+					    <label class="col-4 control-label text-lg-center font-weight-bold">Temas</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Para mi</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Politicos Bogotanos</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Mockus</label>
@@ -1173,112 +1157,112 @@
 						<label class="col-1 control-label text-lg-left font-weight-bold">Samuel</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Petro</label>
 						<label class="col-1 control-label text-lg-left font-weight-bold">Peñalosa</label>
-						<div class="col-1"></div>			
+						<div class="col-1"></div>
 					</div>
 					<div class = "row">
 						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Control de la Calidad del Aire</label>				        
+				        <label class="col-4 control-label text-center">Control de la Calidad del Aire</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_calidad_aire" id="mi_calidad_aire"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_calidad_aire" id="politicos_calidad_aire"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_calidad_aire" id="mockus_calidad_aire"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_calidad_aire" id="lucho_calidad_aire"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_calidad_aire" id="samuel_calidad_aire"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_calidad_aire" id="petro_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_calidad_aire" id="penhalosa_calidad_aire"> </div>				        			
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_calidad_aire" id="penhalosa_calidad_aire"> </div>
 			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Seguridad ante hurtos y homicidios</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Seguridad ante hurtos y homicidios</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_hurtos" id="mi_seguridad_hurtos"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_hurtos" id="politicos_seguridad_hurtos"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_hurtos" id="mockus_seguridad_hurtos"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_hurtos" id="lucho_seguridad_hurtos"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_hurtos" id="samuel_seguridad_hurtos"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_hurtos" id="petro_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_hurtos" id="penhalosa_seguridad_hurtos"> </div>        	
-			        </div>	
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_hurtos" id="penhalosa_seguridad_hurtos"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Disponibilidad de parques y zonas verdes</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Disponibilidad de parques y zonas verdes</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_parques_zonas_verdes" id="mi_parques_zonas_verdes"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_parques_zonas_verdes" id="politicos_parques_zonas_verdes"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_parques_zonas_verdes" id="mockus_parques_zonas_verdes"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_parques_zonas_verdes" id="lucho_parques_zonas_verdes"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_parques_zonas_verdes" id="samuel_parques_zonas_verdes"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_parques_zonas_verdes" id="petro_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_parques_zonas_verdes" id="penhalosa_parques_zonas_verdes"> </div>       
-			        </div>		
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_parques_zonas_verdes" id="penhalosa_parques_zonas_verdes"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Seguridad del peatón</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Seguridad del peatón</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_peaton" id="mi_seguridad_peaton"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_peaton" id="politicos_seguridad_peaton"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_peaton" id="mockus_seguridad_peaton"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_peaton" id="lucho_seguridad_peaton"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_peaton" id="samuel_seguridad_peaton"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_peaton" id="petro_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_peaton" id="penhalosa_seguridad_peaton"> </div>       
-			        </div>		
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_peaton" id="penhalosa_seguridad_peaton"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Plantación árboles</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Plantación árboles</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_plantar_arboles" id="mi_plantar_arboles"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_plantar_arboles" id="politicos_plantar_arboles"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_plantar_arboles" id="mockus_plantar_arboles"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_plantar_arboles" id="lucho_plantar_arboles"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_plantar_arboles" id="samuel_plantar_arboles"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_plantar_arboles" id="petro_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_plantar_arboles" id="penhalosa_plantar_arboles"> </div>       
-			        </div>		
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_plantar_arboles" id="penhalosa_plantar_arboles"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Control ruido</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Control ruido</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_control_ruido" id="mi_control_ruido"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_control_ruido" id="politicos_control_ruido"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_control_ruido" id="mockus_control_ruido"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_control_ruido" id="lucho_control_ruido"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_control_ruido" id="samuel_control_ruido"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_control_ruido" id="petro_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_control_ruido" id="penhalosa_control_ruido"> </div>       
-			        </div>					        
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_control_ruido" id="penhalosa_control_ruido"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Mejoramiento del transporte público</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Mejoramiento del transporte público</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_mejoramiento_transporte" id="mi_mejoramiento_transporte"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_mejoramiento_transporte" id="politicos_mejoramiento_transporte"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_mejoramiento_transporte" id="mockus_mejoramiento_transporte"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_mejoramiento_transporte" id="lucho_mejoramiento_transporte"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_mejoramiento_transporte" id="samuel_mejoramiento_transporte"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_mejoramiento_transporte" id="petro_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_mejoramiento_transporte" id="penhalosa_mejoramiento_transporte"> </div> 
-			        </div>					        
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_mejoramiento_transporte" id="penhalosa_mejoramiento_transporte"> </div>
+			        </div>
 
-					<div class = "row">			
-						<div class="col-1"></div>			
-				        <label class="col-4 control-label text-center">Cultura ciudadana</label>				        
+					<div class = "row">
+						<div class="col-1"></div>
+				        <label class="col-4 control-label text-center">Cultura ciudadana</label>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_cultura_ciudadana" id="mi_cultura_ciudadana"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_cultura_ciudadana" id="politicos_cultura_ciudadana"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_cultura_ciudadana" id="mockus_cultura_ciudadana"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_cultura_ciudadana" id="lucho_cultura_ciudadana"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_cultura_ciudadana" id="samuel_cultura_ciudadana"> </div>
 				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_cultura_ciudadana" id="petro_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_cultura_ciudadana" id="penhalosa_cultura_ciudadana"> </div>       
-			        </div>				        
+				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_cultura_ciudadana" id="penhalosa_cultura_ciudadana"> </div>
+			        </div>
 
-			    </div>	    	
+			    </div>
 
-			</div>    
+			</div>
 
 
 
 			<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1290,7 +1274,7 @@
 
 
 			<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1304,7 +1288,7 @@
 
 
 		     <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -1314,7 +1298,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa calidad de vida, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1329,7 +1313,7 @@
 	       </div>
 
 	       <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -1338,7 +1322,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa el entorno ambiental de su vida, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1353,7 +1337,7 @@
 	       </div>
 
 	       <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -1364,7 +1348,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa la cultura ciudadana de su entorno, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1379,7 +1363,7 @@
 	       </div>
 
 	       <div class="container">
-			      <div class="py-1 text-center">	      
+			      <div class="py-1 text-center">
 			        <p class="lead"> </p>
 			      </div>
 		    </div>
@@ -1390,7 +1374,7 @@
 	      	<div class="py-1 text-center">
 	      	{% load static %}
 	      	<p class="lead"> Para usted, ¿Cuál de estas imágenes representa sus propias prácticas democráticas, y por qué?.</p>
-	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">               
+	        	<img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/tarot.png" %}" alt="" width="634" height="865">
 	      	</div>
 			<div class = "row">
 				<div class="col-2"></div>
@@ -1405,7 +1389,7 @@
 	       </div>
 
 			<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1415,18 +1399,18 @@
 				<div class="row">
 					<div class="col-5"></div>
 	            	<div class="col-2">
-	            		<div class="form-group">	            		
-							<input type="submit"  class="btn btn-success" value="Enviar Encuesta">			    
+	            		<div class="form-group">
+							<input type="submit"  class="btn btn-success" value="Enviar Encuesta">
 						</div>
 					</div>
 					<div class="col-5"></div>
 				</div>
-			</div>	
+			</div>
 
-		</div>		
+		</div>
 
 
-		
+
 
 		<!--              -->
 		<!--      JSON    -->
@@ -1443,22 +1427,55 @@
 	     	</div>
 
 
+	     	<div class="container">
+				<div class="row">
+					<div class="col-2"></div>
+	            	<div class="col-8">
+					    <label for="grupo_rad"> Grupo del Entrevistado </label>
+					    <div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "NINGUNO" checked> Ninguno</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "TAXI"> Taxista</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "UBER"> Uber</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "DISCAPACITADO"> Discapacitado</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "OTRO"> Otro</label>
+						  <input type="text" class="form-control" id="grupo_text" name="grupo_text" placeholder="¿Cuál?">
+						</div>
+
+					</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+			<div class="container">
+		      <div class="py-2 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
 			<div class="container">
 				<div class="row">
 					<div class="col-2"></div>
-	            	<div class="col-8">	            		
-					    <label for="name">Archivo .json: </label>						
+	            	<div class="col-8">
+					    <label for="name">Archivo .json: </label>
 					    <div class="form-group">
-					     	<input type="file" id = "json_file" name="json_file" id="json_file" class="form-control">						    
+					     	<input type="file" id = "json_file" name="json_file" id="json_file" class="form-control">
 					     </div>
 					</div>
 					<div class="col-2"></div>
 				</div>
-			</div>					                    
+			</div>
 
 
 			<div class="container">
-		      <div class="py-2 text-center">	      
+		      <div class="py-2 text-center">
 		        <p class="lead"> </p>
 		      </div>
 	    	</div>
@@ -1468,19 +1485,19 @@
 				<div class="row">
 					<div class="col-5"></div>
 	            	<div class="col-2">
-	            		<div class="form-group">	            		
+	            		<div class="form-group">
 							<input type="submit"  id='send_json_button' class="btn btn-success" value="Enviar JSON">
 						</div>
 					</div>
 					<div class="col-5"></div>
 				</div>
-			</div>					                    
+			</div>
 		</div>
 
 
 
 		<div class="container">
-	      <div class="py-5 text-center">	      
+	      <div class="py-5 text-center">
 	        <p class="lead"> </p>
 	      </div>
     	</div>

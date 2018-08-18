@@ -1,5 +1,5 @@
 CREATE TABLE `db_location_uploads`.`locations_dev` (
-  `id_entrevistado` VARCHAR(12) NOT NULL,
+  `id_entrevistado` VARCHAR(18) NOT NULL,
   `timestamp` INT UNSIGNED NULL,
   `latitude` INT NULL,
   `longitude` INT NULL,

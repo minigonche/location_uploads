@@ -1,5 +1,6 @@
 
 from location_uploads import process_survey as ps
+
 import json
 import os
 import time
@@ -39,24 +40,29 @@ while(True):
 			write_to_log('Nothing found in folder. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
 			time.sleep(sleep_time)
 		else:
-			for file_name in file_names:
 
+			for file_name in file_names:
+				write_to_log('Exporting: ' + file_name )
 				if not file_name.endswith('.json'):
 					write_to_log('Found: ' + file_name + ' which is not a JSON. Deleting file...')
 					os.remove(json_location + file_name)
 				else:
 					json_file = open(json_location + file_name, 'r')
 					data = json.load(json_file)
+					json_file.close()
+		
+					interview_id = data['interview_id']
+					json_hash = data['json_hash']
+					student_id = data['student_id']
 
-					if('interview_id' in data.keys()):
-						interview_id = data['interview_id']
-					else:
-						interview_id = file_name.split('.')[0]
-
-					write_to_log('Exporting: ' + file_name )
 					rows = ps.export_json(interview_id, data)
-					write_to_log( 'Done. Added: ' + str(rows) + ' records to database. Deleting file...')
+					ps.json_exported(interview_id, student_id)
+
+					write_to_log( 'Done. Added: ' + str(rows) + ' records to database. Deleting file...')					
 					os.remove(json_location + file_name)
+
+			write_to_log('Finished Round. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
+			time.sleep(sleep_time)
 
 	except Exception as e:
 	    write_to_log('-----------------')

@@ -1,24 +1,41 @@
 #Script for exporting JSON and surveys to dataBase
-
+# 3a90ef04552902cc7f4f399aadbae784
 
 import json
 import pymysql.cursors
 import pandas as pd
 import string
 import re
+import hashlib
+import os
+
+if(os.path.exists("location_uploads/hash_anonymize.py")):
+	from location_uploads import hash_anonymize as ha
+elif(os.path.exists("website/location_uploads/hash_anonymize.py")):
+	from website.location_uploads import hash_anonymize as ha
+else:
+	raise ImportError('Could not find module hash_anonymize')
+
+
 
 # Gets the location of the sattic content
 # (Surely there Django does this but I could not figure it out)
 def get_static_location():
 
-	#loc = ""
-	loc = "location_uploads/static/location_uploads/"
+	if(os.path.isdir("location_uploads/static/location_uploads")):
+		loc = 'location_uploads/static/location_uploads/'
+	elif(os.path.exists("website/location_uploads/static/location_uploads")):
+		loc = 'website/location_uploads/static/location_uploads/'
+	else:
+		raise FileNotFoundError('static location not found')
+
 	return loc
 
 def get_config_file():
 
 	file =  open(get_static_location() + "config/db_config.json", "r")
 	conf = json.load(file)
+	file.close()
 
 	return(conf)
 
@@ -27,41 +44,9 @@ def activity_mapper():
 
 	file =  open(get_static_location() + "config/activity_mapper.json", "r")
 	act = json.load(file)
+	file.close()
 
 	return(act)
-
-
-def anonimize(entry_string, max_len = 12):
-
-	if(entry_string == ""):
-		return('0')
-	
-	#Eliminates unsupported charachters
-	entry_string = re.sub('[^0-9a-zA-Z]+', '0', entry_string)
-	entry_string = entry_string[(-1*min(max_len, len(entry_string))):]
-
-
-	entry_string = entry_string.lower()
-	out_string = ''
-
-	switch = 1
-
-	for i in range(len(entry_string)):
-		new_char = ""
-		if(entry_string[i].isalpha()):
-			new_number = string.ascii_lowercase.index(entry_string[i])
-			new_number = (new_number + switch*(i+1))%26
-			new_char = string.ascii_lowercase[new_number]
-		else:
-			new_number = int(entry_string[i])
-			new_number = (new_number + switch*(i+1))%10
-			new_char = str(new_number)
-
-		out_string = out_string + new_char
-		switch = switch*(-1)
-			
-
-	return(out_string)
 
 
 
@@ -92,7 +77,7 @@ def get_data_base():
 	return(connection)
 
 
-#Exceute quety on database
+#Exceute query on database
 def excecute_query(sql):
 
 	connection = get_data_base()
@@ -110,6 +95,26 @@ def excecute_query(sql):
 
 	return(True)
 
+
+#Exceute query on database
+def excecute_select_query(sql):
+
+	connection = get_data_base()
+	response = None
+
+	try:
+		with connection.cursor() as cursor:
+			# Create a new record	        
+			cursor.execute(sql)
+			response = cursor.fetchall()
+
+		#COmmits changes
+		connection.commit()
+
+	finally:
+		connection.close()
+
+	return(response)
 
 
 
@@ -141,6 +146,8 @@ def export_survey(responses):
 			insert_val = 'NULL'
 
 		elif('VARCHAR' in row['type']):
+			val = str(val).replace('"','')
+			val = str(val).replace("'",'')
 			insert_val = "'" + val + "'"
 
 		elif('INT' in row['type']):
@@ -159,11 +166,186 @@ def export_survey(responses):
 
 	return(excecute_query(sql))
 
+#Creates suummary if does not exists
+def create_sumary(interview_id, student_id):
+
+	query =  'SELECT * FROM ' + get_table('summary') + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
+
+	resp = excecute_select_query(query)
+
+	if len(resp) == 0:
+
+		query = 'INSERT INTO ' + get_table('summary')+ ' (`carnet`, `id_entrevistado`) VALUES ("' + student_id + '", "' + interview_id + '");'
+		excecute_query(query)
+
+#Creates suummary if does not exists
+def create_sumary_from_hash(hash):
+
+	query =  'SELECT * FROM ' + get_table('summary') + ' WHERE json_id = "' + hash + '";'
+
+	resp = excecute_select_query(query)
+
+	if len(resp) == 0:
+
+		query = 'INSERT INTO ' + get_table('summary')+ ' (`json_id`) VALUES ("' + hash + '");'
+		excecute_query(query)
+	
+
+
+#Method that saves into the databse when a JSON was received
+def json_received(interview_id, student_id, hash_code, grupo = 'NINGUNO'):
+
+	#Checks if interview_id and student_id row exists
+	create_sumary(interview_id, student_id)
+
+	time_stamp = ha.get_timestamp()
+	query = 'UPDATE ' + get_table('summary') 
+	#timestamp
+	query = query + ' SET timestamp_json = ' + str(time_stamp) + ', ' 
+	#has
+	query = query + ' json_id = "' + hash_code + '", ' 
+	#grupo
+	query = query + ' grupo = "' + grupo + '", ' 
+	#Entrego
+	query = query + ' entrego_json = TRUE '
+	#Where claus
+	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
+
+	excecute_query(query)
+
+#TODO
+
+#Method that saves into the databse when a survey was received
+def survey_received(interview_id, student_id):
+	
+	#Checks if interview_id and student_id row exists
+	create_sumary(interview_id, student_id)
+
+	time_stamp = ha.get_timestamp()
+	query = 'UPDATE ' + get_table('summary') 
+	#timestamp
+	query = query + ' SET timestamp_encuesta = ' + str(time_stamp) + ', ' 
+	#Entrego
+	query = query + ' entrego_encuesta = TRUE '
+	#Where claus
+	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
+
+	excecute_query(query)
+
+
+
+#Method that saves into the databse when a JSON was exported
+def json_exported(hash):
+	
+	#Checks if interview_id and student_id row exists
+	create_sumary_from_hash(hash)
+
+	query = 'UPDATE ' + get_table('summary') 
+	#Entrego
+	query = query + ' SET exporto_json = TRUE '
+	#Where claus
+	query = query + ' WHERE json_id = "' + hash + '";'
+
+	excecute_query(query)
+
+
+#Method that saves into the databse when a JSON was exported
+def json_exported(interview_id, student_id):
+	
+	#Checks if interview_id and student_id row exists
+	create_sumary(interview_id, student_id)
+
+	query = 'UPDATE ' + get_table('summary') 
+	#Entrego
+	query = query + ' SET exporto_json = TRUE '
+	#Where claus
+	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
+
+	excecute_query(query)
+
+#Check status of JSON
+# Returns one of three status
+# NOT_FOUND: JSON is no in the data base
+# USER_UPLOADED: JSON was already uploaded by that user
+# UPLOADED: JSON is already in the database
+def check_json_status(student_id, hash):
+
+	query =  ' SELECT carnet FROM ' + get_table('summary') 
+	query = query + ' WHERE json_id = "' + hash + '";'
+
+	resp = excecute_select_query(query)
+
+	if(len(resp) == 0):
+		return('NOT_FOUND')
+
+	for row in resp:
+		if(student_id == row['carnet']):
+			return('USER_UPLOADED')
+
+	return('UPLOADED')
+
+#Check status of the interview_id (already anonimized)
+# Returns one of two status
+# NOT_FOUND: interview_id is no in the data base
+# USER_UPLOADED: interview_id was created by that user
+# UPLOADED: interview_id is already in the database
+def check_interview_id_status(student_id, interview_id):
+
+	query =  ' SELECT * FROM ' + get_table('summary') 
+	query = query + ' WHERE id_entrevistado = "' + interview_id + '";'
+
+	resp = excecute_select_query(query)
+
+	if(len(resp) == 0):
+		return('NOT_FOUND')
+
+	for row in resp:
+		if(student_id == row['carnet']):
+			return('USER_UPLOADED')
+
+	return('UPLOADED')
+
+
+# Checks status of the student and the interviwer.
+# Assumes the interview_id is already anonimized
+# Returns one of three status
+# NOT_FOUND: The interviwed id is not in the database
+# FOUND_JSON: Found JSON for that interview_id
+# FOUND_SURVEY: Found survey for that interview_id
+# FOUND_BOTH: Found survey and JSON for that interview_id
+def check_interview_status(interview_id, student_id):
+
+	query =  ' SELECT entrego_json, entrego_encuesta FROM ' + get_table('summary') 
+	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
+
+	resp = excecute_select_query(query)
+
+	if(len(resp) == 0):
+		return('NOT_FOUND')
+
+	row = resp[0]
+
+	if(row['entrego_json'] == 0 and row['entrego_encuesta'] == 0):
+		return('NOT_FOUND')
+
+	if(row['entrego_json'] == 1 and row['entrego_encuesta'] == 0):
+		return('FOUND_JSON')
+
+	if(row['entrego_json'] == 0 and row['entrego_encuesta'] == 1):
+		return('FOUND_SURVEY')
+
+	if(row['entrego_json'] == 1 and row['entrego_encuesta'] == 1):
+		return('FOUND_BOTH')		
+
+
+	raise ValueError('Combination not taking into account when checking survey and json status')
+
 
 
 def save_json(json_obj, name):
 	outfile = open(get_static_location() + 'jsons/' + name + '.json', 'w')
 	json.dump(json_obj, outfile)
+	outfile.close()
 
 
 #inserts the json file into the database by batches
@@ -287,6 +469,7 @@ def export_json(interview_id, data, verbose = False):
 
 	if(verbose):
 		print('JSON Exported')
+
 	return(global_counter)
 
 

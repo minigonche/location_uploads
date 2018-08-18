@@ -25,7 +25,7 @@ SECRET_KEY = '*ioycyl^x3+4+0waqpz(dqst!-res5!^k6g=z)+^jd6=zl7dbk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["ec2-52-53-242-95.us-west-1.compute.amazonaws.com"]
+ALLOWED_HOSTS = ["ec2-52-53-242-95.us-west-1.compute.amazonaws.com", "localhost"]
 
 
 # REDIS related settings 
