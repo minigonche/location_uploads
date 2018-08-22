@@ -84,7 +84,7 @@ def excecute_query(sql):
 
 	try:
 		with connection.cursor() as cursor:
-			# Create a new record	        
+			# Create a new record
 			cursor.execute(sql)
 
 		#COmmits changes
@@ -104,7 +104,7 @@ def excecute_select_query(sql):
 
 	try:
 		with connection.cursor() as cursor:
-			# Create a new record	        
+			# Create a new record
 			cursor.execute(sql)
 			response = cursor.fetchall()
 
@@ -189,7 +189,7 @@ def create_sumary_from_hash(hash):
 
 		query = 'INSERT INTO ' + get_table('summary')+ ' (`json_id`) VALUES ("' + hash + '");'
 		excecute_query(query)
-	
+
 
 
 #Method that saves into the databse when a JSON was received
@@ -199,13 +199,13 @@ def json_received(interview_id, student_id, hash_code, grupo = 'NINGUNO'):
 	create_sumary(interview_id, student_id)
 
 	time_stamp = ha.get_timestamp()
-	query = 'UPDATE ' + get_table('summary') 
+	query = 'UPDATE ' + get_table('summary')
 	#timestamp
-	query = query + ' SET timestamp_json = ' + str(time_stamp) + ', ' 
+	query = query + ' SET timestamp_json = ' + str(time_stamp) + ', '
 	#has
-	query = query + ' json_id = "' + hash_code + '", ' 
+	query = query + ' json_id = "' + hash_code + '", '
 	#grupo
-	query = query + ' grupo = "' + grupo + '", ' 
+	query = query + ' grupo = "' + grupo + '", '
 	#Entrego
 	query = query + ' entrego_json = TRUE '
 	#Where claus
@@ -213,18 +213,18 @@ def json_received(interview_id, student_id, hash_code, grupo = 'NINGUNO'):
 
 	excecute_query(query)
 
-#TODO
+
 
 #Method that saves into the databse when a survey was received
 def survey_received(interview_id, student_id):
-	
+
 	#Checks if interview_id and student_id row exists
 	create_sumary(interview_id, student_id)
 
 	time_stamp = ha.get_timestamp()
-	query = 'UPDATE ' + get_table('summary') 
+	query = 'UPDATE ' + get_table('summary')
 	#timestamp
-	query = query + ' SET timestamp_encuesta = ' + str(time_stamp) + ', ' 
+	query = query + ' SET timestamp_encuesta = ' + str(time_stamp) + ', '
 	#Entrego
 	query = query + ' entrego_encuesta = TRUE '
 	#Where claus
@@ -235,14 +235,16 @@ def survey_received(interview_id, student_id):
 
 
 #Method that saves into the databse when a JSON was exported
-def json_exported(hash):
-	
+def json_exported(hash, numero_registros):
+
 	#Checks if interview_id and student_id row exists
 	create_sumary_from_hash(hash)
 
-	query = 'UPDATE ' + get_table('summary') 
+	query = 'UPDATE ' + get_table('summary')
 	#Entrego
-	query = query + ' SET exporto_json = TRUE '
+	query = query + ' SET exporto_json = TRUE, '
+	#Numero de Registros
+	query = query + ' numero_registros = ' + str(numero_registros) + ' '
 	#Where claus
 	query = query + ' WHERE json_id = "' + hash + '";'
 
@@ -250,14 +252,16 @@ def json_exported(hash):
 
 
 #Method that saves into the databse when a JSON was exported
-def json_exported(interview_id, student_id):
-	
+def json_exported(interview_id, student_id, numero_registros):
+
 	#Checks if interview_id and student_id row exists
 	create_sumary(interview_id, student_id)
 
-	query = 'UPDATE ' + get_table('summary') 
+	query = 'UPDATE ' + get_table('summary')
 	#Entrego
-	query = query + ' SET exporto_json = TRUE '
+	query = query + ' SET exporto_json = TRUE, '
+	#Numero de Registros
+	query = query + ' numero_registros = ' + str(numero_registros) + ' '
 	#Where claus
 	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
 
@@ -270,7 +274,7 @@ def json_exported(interview_id, student_id):
 # UPLOADED: JSON is already in the database
 def check_json_status(student_id, hash):
 
-	query =  ' SELECT carnet FROM ' + get_table('summary') 
+	query =  ' SELECT carnet FROM ' + get_table('summary')
 	query = query + ' WHERE json_id = "' + hash + '";'
 
 	resp = excecute_select_query(query)
@@ -291,7 +295,7 @@ def check_json_status(student_id, hash):
 # UPLOADED: interview_id is already in the database
 def check_interview_id_status(student_id, interview_id):
 
-	query =  ' SELECT * FROM ' + get_table('summary') 
+	query =  ' SELECT * FROM ' + get_table('summary')
 	query = query + ' WHERE id_entrevistado = "' + interview_id + '";'
 
 	resp = excecute_select_query(query)
@@ -315,7 +319,7 @@ def check_interview_id_status(student_id, interview_id):
 # FOUND_BOTH: Found survey and JSON for that interview_id
 def check_interview_status(interview_id, student_id):
 
-	query =  ' SELECT entrego_json, entrego_encuesta FROM ' + get_table('summary') 
+	query =  ' SELECT entrego_json, entrego_encuesta FROM ' + get_table('summary')
 	query = query + ' WHERE id_entrevistado = "' + interview_id + '" and carnet = "' + student_id + '";'
 
 	resp = excecute_select_query(query)
@@ -335,7 +339,7 @@ def check_interview_status(interview_id, student_id):
 		return('FOUND_SURVEY')
 
 	if(row['entrego_json'] == 1 and row['entrego_encuesta'] == 1):
-		return('FOUND_BOTH')		
+		return('FOUND_BOTH')
 
 
 	raise ValueError('Combination not taking into account when checking survey and json status')
@@ -362,7 +366,7 @@ def export_json(interview_id, data, verbose = False):
 	scheme = pd.read_csv(get_static_location() + 'config/table_locations_scheme.csv')
 
 	header = 'INSERT INTO ' + get_table('locations') + ' ('
-	
+
 
 	#Sets up the header
 	for ind in scheme.index:
@@ -370,7 +374,7 @@ def export_json(interview_id, data, verbose = False):
 		row = scheme.iloc[ind]
 		header = header + row['name'] + ','
 
-	header = header[0:-1] + ') VALUES'	
+	header = header[0:-1] + ') VALUES'
 
 
 	sql = header
@@ -378,7 +382,7 @@ def export_json(interview_id, data, verbose = False):
 	global_counter = 0
 	for location in data['locations'][0:-1]:
 
-		temp_loc = {}		
+		temp_loc = {}
 		temp_loc['id_entrevistado'] = interview_id
 
 		#sends it to seconds from 200/01/01
@@ -417,7 +421,7 @@ def export_json(interview_id, data, verbose = False):
 				temp_loc['activity'] = act_mapper['UNKNOWN']
 			else:
 				temp_loc['activity'] = act_mapper[act_type]
-		
+
 			temp_loc['activity_confidence'] = act['activity'][0]['confidence']
 
 		line = '('
@@ -453,7 +457,7 @@ def export_json(interview_id, data, verbose = False):
 		if(counter < max_insert):
 			sql = sql +  '\n' + line + ','
 		else:
-			counter = 0	
+			counter = 0
 			sql = sql + '\n' + line + ';'
 			if(verbose):
 				print('Batch Inserted')
@@ -529,10 +533,3 @@ def export_json_csv(student_id, interview_id, survey_dict):
 	file.close()
 	file_out.close()
 	print('File OK')
-
-
-	
-
-
-
-	

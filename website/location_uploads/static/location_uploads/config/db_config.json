@@ -1,5 +1,5 @@
 {
-	
+
 	"host" : "location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com",
 	"user" : "administrador",
 	"password" : "anal_geografico_2018",
@@ -7,7 +7,7 @@
 	"max_insert_batch" : 10000,
 	"log_location" : "publisher.log",
 	"json_location" : "location_uploads/static/location_uploads/jsons/",
-	"sleep_time" : 120,
-	"table_names" : {"surveys" : "survey_dev", "locations" : "locations_dev", "summary" : "summary_dev"}
+	"sleep_time" : 3600,
+	"table_names" : {"surveys" : "survey_prod", "locations" : "locations_prod", "summary" : "summary_prod"}
 
 }

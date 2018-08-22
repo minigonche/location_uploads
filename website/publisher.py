@@ -31,17 +31,20 @@ while(True):
 	json_location = conf["json_location"]
 	sleep_time = conf["sleep_time"]
 
-	try:
 
-		file_names = os.listdir(json_location)
-		np.random.shuffle(file_names)
 
-		if(len(file_names) == 0):
-			write_to_log('Nothing found in folder. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
-			time.sleep(sleep_time)
-		else:
+	file_names = os.listdir(json_location)
+	np.random.shuffle(file_names)
 
-			for file_name in file_names:
+	if(len(file_names) == 0):
+		write_to_log('Nothing found in folder. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
+		time.sleep(sleep_time)
+	else:
+
+		for file_name in file_names:
+
+			try:
+
 				write_to_log('Exporting: ' + file_name )
 				if not file_name.endswith('.json'):
 					write_to_log('Found: ' + file_name + ' which is not a JSON. Deleting file...')
@@ -50,36 +53,24 @@ while(True):
 					json_file = open(json_location + file_name, 'r')
 					data = json.load(json_file)
 					json_file.close()
-		
+
 					interview_id = data['interview_id']
 					json_hash = data['json_hash']
 					student_id = data['student_id']
 
 					rows = ps.export_json(interview_id, data)
-					ps.json_exported(interview_id, student_id)
+					ps.json_exported(interview_id, student_id, rows )
 
-					write_to_log( 'Done. Added: ' + str(rows) + ' records to database. Deleting file...')					
+					write_to_log( 'Done. Added: ' + str(rows) + ' records to database. Deleting file...')
 					os.remove(json_location + file_name)
 
-			write_to_log('Finished Round. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
-			time.sleep(sleep_time)
+			except Exception as e:
+			    write_to_log('-----------------')
+			    write_to_log('Error:')
+			    write_to_log('-----------------')
+			    write_to_log(str(e))
+			    write_to_log(' ')
+			    write_to_log(' ')
 
-	except Exception as e:
-	    write_to_log('-----------------')
-	    write_to_log('Error:')
-	    write_to_log('-----------------')
-	    write_to_log(str(e))
-	    write_to_log(' ')
-	    write_to_log(' ')
-
-
-
-
-
-
-
-
-
-
-
-
+		write_to_log('Finished Round. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')
+		time.sleep(sleep_time)

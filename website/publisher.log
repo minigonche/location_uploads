@@ -1,5 +1,308 @@
-2018-08-18 10:25:53: Exporting: 58371745.json
-2018-08-18 10:30:34: Done. Added: 86550 records to database. Deleting file...
-2018-08-18 10:30:34: Exporting: 38762036.json
-2018-08-18 10:37:38: Done. Added: 133983 records to database. Deleting file...
-2018-08-18 10:37:38: Exporting: 32373936.json
+2018-08-22 06:55:52: Exporting: 2833852292.json
+2018-08-22 06:58:36: Done. Added: 97380 records to database. Deleting file...
+2018-08-22 06:58:36: Exporting: 60967782.json
+2018-08-22 07:02:05: Done. Added: 122030 records to database. Deleting file...
+2018-08-22 07:02:05: Exporting: 4907611.json
+2018-08-22 07:05:04: Done. Added: 108248 records to database. Deleting file...
+2018-08-22 07:05:04: Exporting: 98454681.json
+2018-08-22 07:08:30: Done. Added: 125337 records to database. Deleting file...
+2018-08-22 07:08:30: Exporting: 2845682280.json
+2018-08-22 07:12:06: Done. Added: 130930 records to database. Deleting file...
+2018-08-22 07:12:06: Exporting: 2836025437.json
+2018-08-22 07:13:56: Done. Added: 62627 records to database. Deleting file...
+2018-08-22 07:13:56: Exporting: 2849139568.json
+2018-08-22 07:16:05: Done. Added: 71231 records to database. Deleting file...
+2018-08-22 07:16:05: Exporting: 2929769225.json
+2018-08-22 07:18:11: Done. Added: 57102 records to database. Deleting file...
+2018-08-22 07:18:11: Exporting: 2833257101.json
+2018-08-22 07:22:05: Done. Added: 117015 records to database. Deleting file...
+2018-08-22 07:22:05: Exporting: 60151332.json
+2018-08-22 07:24:35: Done. Added: 74012 records to database. Deleting file...
+2018-08-22 07:24:35: Exporting: 98764897.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/98764897.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2841979785.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2841979785.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2831840224.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2831840224.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 614822.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/614822.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836725538.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836725538.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2831258678.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2831258678.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2856366710.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2856366710.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2849126873.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2849126873.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 27653662.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/27653662.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2866170108.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2866170108.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 60132722.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60132722.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2893255103.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2893255103.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2845683263.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2845683263.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2929921723.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2929921723.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836786393.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836786393.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 60199411.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60199411.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2069045990.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2069045990.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 37901891.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/37901891.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2852844207.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2852844207.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2061775293.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2061775293.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2928216465.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2928216465.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 35000089.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/35000089.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836123389.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836123389.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836722626.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836722626.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2830519657.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2830519657.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2069059733.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2069059733.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2846543722.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2846543722.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2868045512.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2868045512.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2929683017.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2929683017.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2832498663.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2832498663.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 60429096.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60429096.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2837879289.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2837879289.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836627920.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836627920.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2856273326.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2856273326.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2842530163.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2842530163.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2970643898.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2970643898.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2867670274.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2867670274.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2836343334.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836343334.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2893473171.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2893473171.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2837625008.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2837625008.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Exporting: 2846863536.json
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: Error:
+2018-08-22 07:24:35: -----------------
+2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2846863536.json'
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35:  
+2018-08-22 07:24:35: Finished Round. Sleeping for: 60 minutes
