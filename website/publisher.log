@@ -1,308 +1,346 @@
-2018-08-22 06:55:52: Exporting: 2833852292.json
-2018-08-22 06:58:36: Done. Added: 97380 records to database. Deleting file...
-2018-08-22 06:58:36: Exporting: 60967782.json
-2018-08-22 07:02:05: Done. Added: 122030 records to database. Deleting file...
-2018-08-22 07:02:05: Exporting: 4907611.json
-2018-08-22 07:05:04: Done. Added: 108248 records to database. Deleting file...
-2018-08-22 07:05:04: Exporting: 98454681.json
-2018-08-22 07:08:30: Done. Added: 125337 records to database. Deleting file...
-2018-08-22 07:08:30: Exporting: 2845682280.json
-2018-08-22 07:12:06: Done. Added: 130930 records to database. Deleting file...
-2018-08-22 07:12:06: Exporting: 2836025437.json
-2018-08-22 07:13:56: Done. Added: 62627 records to database. Deleting file...
-2018-08-22 07:13:56: Exporting: 2849139568.json
-2018-08-22 07:16:05: Done. Added: 71231 records to database. Deleting file...
-2018-08-22 07:16:05: Exporting: 2929769225.json
-2018-08-22 07:18:11: Done. Added: 57102 records to database. Deleting file...
-2018-08-22 07:18:11: Exporting: 2833257101.json
-2018-08-22 07:22:05: Done. Added: 117015 records to database. Deleting file...
-2018-08-22 07:22:05: Exporting: 60151332.json
-2018-08-22 07:24:35: Done. Added: 74012 records to database. Deleting file...
-2018-08-22 07:24:35: Exporting: 98764897.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/98764897.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2841979785.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2841979785.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2831840224.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2831840224.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 614822.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/614822.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836725538.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836725538.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2831258678.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2831258678.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2856366710.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2856366710.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2849126873.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2849126873.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 27653662.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/27653662.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2866170108.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2866170108.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 60132722.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60132722.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2893255103.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2893255103.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2845683263.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2845683263.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2929921723.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2929921723.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836786393.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836786393.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 60199411.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60199411.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2069045990.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2069045990.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 37901891.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/37901891.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2852844207.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2852844207.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2061775293.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2061775293.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2928216465.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2928216465.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 35000089.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/35000089.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836123389.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836123389.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836722626.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836722626.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2830519657.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2830519657.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2069059733.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2069059733.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2846543722.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2846543722.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2868045512.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2868045512.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2929683017.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2929683017.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2832498663.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2832498663.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 60429096.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/60429096.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2837879289.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2837879289.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836627920.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836627920.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2856273326.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2856273326.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2842530163.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2842530163.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2970643898.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2970643898.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2867670274.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2867670274.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2836343334.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2836343334.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2893473171.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2893473171.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2837625008.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2837625008.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Exporting: 2846863536.json
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: Error:
-2018-08-22 07:24:35: -----------------
-2018-08-22 07:24:35: [Errno 2] No such file or directory: 'location_uploads/static/location_uploads/jsons/2846863536.json'
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35:  
-2018-08-22 07:24:35: Finished Round. Sleeping for: 60 minutes
+2018-08-24 17:27:33: Exporting: 2842536356.json
+2018-08-24 17:42:53: Done. Added: 383590 records to database. Deleting file...
+2018-08-24 17:42:53: Exporting: 60445122.json
+2018-08-24 18:05:55: Done. Added: 699734 records to database. Deleting file...
+2018-08-24 18:05:55: Exporting: 2845503873.json
+2018-08-24 18:19:51: Done. Added: 470644 records to database. Deleting file...
+2018-08-24 18:19:51: Exporting: 87666839.json
+2018-08-24 18:32:55: Done. Added: 470054 records to database. Deleting file...
+2018-08-24 18:32:55: Exporting: 94730637.json
+2018-08-24 19:03:32: Done. Added: 1100325 records to database. Deleting file...
+2018-08-24 19:03:32: Exporting: 2841916888.json
+2018-08-24 19:20:26: Done. Added: 613897 records to database. Deleting file...
+2018-08-24 19:20:26: Exporting: 2880532984.json
+2018-08-24 19:29:34: Done. Added: 327824 records to database. Deleting file...
+2018-08-24 19:29:34: Exporting: 2929917459.json
+2018-08-24 19:38:09: Done. Added: 292425 records to database. Deleting file...
+2018-08-24 19:38:09: Exporting: 18376172479.json
+2018-08-24 20:05:23: Done. Added: 800900 records to database. Deleting file...
+2018-08-24 20:05:23: Exporting: 2840846229.json
+2018-08-24 20:27:44: Done. Added: 751211 records to database. Deleting file...
+2018-08-24 20:27:44: Exporting: 2844990092.json
+2018-08-24 20:42:14: Done. Added: 409164 records to database. Deleting file...
+2018-08-24 20:42:14: Exporting: 2856343646.json
+2018-08-24 20:56:03: Done. Added: 477951 records to database. Deleting file...
+2018-08-24 20:56:03: Exporting: 4917610.json
+2018-08-24 21:13:09: Done. Added: 589236 records to database. Deleting file...
+2018-08-24 21:13:09: Exporting: 2856203910.json
+2018-08-24 21:32:04: Done. Added: 649972 records to database. Deleting file...
+2018-08-24 21:32:04: Exporting: 2852734688.json
+2018-08-24 21:47:14: Done. Added: 517775 records to database. Deleting file...
+2018-08-24 21:47:14: Exporting: 2844057867.json
+2018-08-24 22:01:24: Done. Added: 483773 records to database. Deleting file...
+2018-08-24 22:01:24: Exporting: 59672368.json
+2018-08-24 22:12:06: Done. Added: 360923 records to database. Deleting file...
+2018-08-24 22:12:06: Exporting: 2868907753.json
+2018-08-24 22:31:43: Done. Added: 662267 records to database. Deleting file...
+2018-08-24 22:31:43: Exporting: 2856375034.json
+2018-08-24 22:48:13: Done. Added: 532532 records to database. Deleting file...
+2018-08-24 22:48:13: Exporting: 681520.json
+2018-08-24 23:00:27: Done. Added: 338251 records to database. Deleting file...
+2018-08-24 23:00:27: Exporting: 87720650.json
+2018-08-24 23:30:28: Done. Added: 999492 records to database. Deleting file...
+2018-08-24 23:30:28: Exporting: 2839015102.json
+2018-08-24 23:40:27: Done. Added: 358882 records to database. Deleting file...
+2018-08-24 23:40:27: Exporting: 2932227212.json
+2018-08-24 23:58:07: Done. Added: 630615 records to database. Deleting file...
+2018-08-24 23:58:07: Exporting: 2840766785.json
+2018-08-25 00:15:49: Done. Added: 630470 records to database. Deleting file...
+2018-08-25 00:15:49: Exporting: 2845532033.json
+2018-08-25 00:39:11: Done. Added: 839679 records to database. Deleting file...
+2018-08-25 00:39:11: Exporting: 87074957.json
+2018-08-25 00:58:00: Done. Added: 677477 records to database. Deleting file...
+2018-08-25 00:58:00: Exporting: 60235721.json
+2018-08-25 01:12:04: Done. Added: 497939 records to database. Deleting file...
+2018-08-25 01:12:04: Exporting: 2836513895.json
+2018-08-25 01:24:46: Done. Added: 452001 records to database. Deleting file...
+2018-08-25 01:24:46: Exporting: 2852848005.json
+2018-08-25 01:37:56: Done. Added: 467910 records to database. Deleting file...
+2018-08-25 01:37:56: Exporting: 71802666.json
+2018-08-25 01:57:00: Done. Added: 688428 records to database. Deleting file...
+2018-08-25 01:57:00: Exporting: 2856205312.json
+2018-08-25 02:22:18: Done. Added: 902254 records to database. Deleting file...
+2018-08-25 02:22:18: Exporting: 2847528737.json
+2018-08-25 02:33:04: Done. Added: 371035 records to database. Deleting file...
+2018-08-25 02:33:04: Exporting: 283318394019.json
+2018-08-25 02:44:48: Done. Added: 410418 records to database. Deleting file...
+2018-08-25 02:44:48: Exporting: 2824350106.json
+2018-08-25 02:58:20: Done. Added: 475161 records to database. Deleting file...
+2018-08-25 02:58:20: Exporting: 2849129740.json
+2018-08-25 03:09:40: Done. Added: 401328 records to database. Deleting file...
+2018-08-25 03:09:40: Exporting: 283318394014.json
+2018-08-25 03:29:30: Done. Added: 707635 records to database. Deleting file...
+2018-08-25 03:29:30: Exporting: 2856234.json
+2018-08-25 03:49:01: Done. Added: 708690 records to database. Deleting file...
+2018-08-25 03:49:01: Exporting: 2837633962.json
+2018-08-25 04:10:24: Done. Added: 774137 records to database. Deleting file...
+2018-08-25 04:10:24: Exporting: 2838690653.json
+2018-08-25 04:24:35: Done. Added: 503971 records to database. Deleting file...
+2018-08-25 04:24:35: Exporting: 2970643898.json
+2018-08-25 04:24:36: -----------------
+2018-08-25 04:24:36: Error:
+2018-08-25 04:24:36: -----------------
+2018-08-25 04:24:36: 'locations'
+2018-08-25 04:24:36:  
+2018-08-25 04:24:36:  
+2018-08-25 04:24:36: Exporting: 2844058983.json
+2018-08-25 04:43:29: Done. Added: 673233 records to database. Deleting file...
+2018-08-25 04:43:29: Exporting: 7598456.json
+2018-08-25 04:51:21: Done. Added: 280927 records to database. Deleting file...
+2018-08-25 04:51:21: Exporting: 2837621383.json
+2018-08-25 05:19:23: Done. Added: 941458 records to database. Deleting file...
+2018-08-25 05:19:23: Exporting: 43450597.json
+2018-08-25 05:36:22: Done. Added: 598547 records to database. Deleting file...
+2018-08-25 05:36:23: Exporting: 87402459.json
+2018-08-25 06:02:18: Done. Added: 940703 records to database. Deleting file...
+2018-08-25 06:02:18: Exporting: 2836012669.json
+2018-08-25 06:14:07: Done. Added: 427877 records to database. Deleting file...
+2018-08-25 06:14:07: Exporting: 2842645722.json
+2018-08-25 06:25:24: Done. Added: 408516 records to database. Deleting file...
+2018-08-25 06:25:24: Exporting: 11305615.json
+2018-08-25 06:35:15: Done. Added: 356069 records to database. Deleting file...
+2018-08-25 06:35:15: Exporting: 2840720479.json
+2018-08-25 06:49:48: Done. Added: 522681 records to database. Deleting file...
+2018-08-25 06:49:48: Exporting: 2868934316.json
+2018-08-25 07:12:02: Done. Added: 808158 records to database. Deleting file...
+2018-08-25 07:12:02: Exporting: 2856374932.json
+2018-08-25 07:24:10: Done. Added: 432794 records to database. Deleting file...
+2018-08-25 07:24:11: Exporting: 2873042694.json
+2018-08-25 07:48:03: Done. Added: 841432 records to database. Deleting file...
+2018-08-25 07:48:03: Exporting: 2838493334.json
+2018-08-25 08:01:34: Done. Added: 496005 records to database. Deleting file...
+2018-08-25 08:01:34: Exporting: 2928333694.json
+2018-08-25 08:17:17: Done. Added: 583987 records to database. Deleting file...
+2018-08-25 08:17:17: Exporting: 2852032828.json
+2018-08-25 08:32:18: Done. Added: 539637 records to database. Deleting file...
+2018-08-25 08:32:18: Exporting: 2832367513.json
+2018-08-25 08:47:00: Done. Added: 520462 records to database. Deleting file...
+2018-08-25 08:47:00: Exporting: 2856380214.json
+2018-08-25 09:04:47: Done. Added: 648535 records to database. Deleting file...
+2018-08-25 09:04:47: Exporting: 2836048083.json
+2018-08-25 09:14:18: Done. Added: 340755 records to database. Deleting file...
+2018-08-25 09:14:18: Exporting: 2929911807.json
+2018-08-25 09:32:53: Done. Added: 669996 records to database. Deleting file...
+2018-08-25 09:32:53: Exporting: 2814819703.json
+2018-08-25 09:46:38: Done. Added: 508216 records to database. Deleting file...
+2018-08-25 09:46:38: Exporting: 2846665506.json
+2018-08-25 09:57:32: Done. Added: 393155 records to database. Deleting file...
+2018-08-25 09:57:32: Exporting: 98302308.json
+2018-08-25 10:29:56: Done. Added: 1170928 records to database. Deleting file...
+2018-08-25 10:29:56: Exporting: 4972038.json
+2018-08-25 10:42:37: Done. Added: 420111 records to database. Deleting file...
+2018-08-25 10:42:37: Exporting: 2848800922.json
+2018-08-25 11:04:34: Done. Added: 685069 records to database. Deleting file...
+2018-08-25 11:04:34: Exporting: 2856374674.json
+2018-08-25 11:19:06: Done. Added: 432794 records to database. Deleting file...
+2018-08-25 11:19:06: Exporting: 2928342699.json
+2018-08-25 11:30:53: Done. Added: 377427 records to database. Deleting file...
+2018-08-25 11:30:53: Exporting: 1831719986.json
+2018-08-25 11:40:45: Done. Added: 335702 records to database. Deleting file...
+2018-08-25 11:40:45: Exporting: 2836685657.json
+2018-08-25 11:58:17: Done. Added: 519736 records to database. Deleting file...
+2018-08-25 11:58:17: Exporting: 2843758750.json
+2018-08-25 12:14:11: Done. Added: 431340 records to database. Deleting file...
+2018-08-25 12:14:11: Exporting: 2837406901.json
+2018-08-25 12:31:45: Done. Added: 622970 records to database. Deleting file...
+2018-08-25 12:31:45: Exporting: 2844042178.json
+2018-08-25 12:42:06: Done. Added: 368798 records to database. Deleting file...
+2018-08-25 12:42:06: Exporting: 98591933.json
+2018-08-25 12:52:25: Done. Added: 363759 records to database. Deleting file...
+2018-08-25 12:52:25: Exporting: 2809062391.json
+2018-08-25 13:07:02: Done. Added: 524171 records to database. Deleting file...
+2018-08-25 13:07:02: Exporting: 283404102.json
+2018-08-25 13:16:20: Done. Added: 331890 records to database. Deleting file...
+2018-08-25 13:16:20: Exporting: 2836254916.json
+2018-08-25 13:30:14: Done. Added: 482684 records to database. Deleting file...
+2018-08-25 13:30:14: Exporting: 6034203.json
+2018-08-25 14:02:28: Done. Added: 1161790 records to database. Deleting file...
+2018-08-25 14:02:28: Exporting: 2846618927.json
+2018-08-25 14:18:50: Done. Added: 566522 records to database. Deleting file...
+2018-08-25 14:18:50: Exporting: 2866185541.json
+2018-08-25 14:34:01: Done. Added: 529042 records to database. Deleting file...
+2018-08-25 14:34:01: Exporting: 2803972640.json
+2018-08-25 14:53:03: Done. Added: 662997 records to database. Deleting file...
+2018-08-25 14:53:03: Exporting: 2868936778.json
+2018-08-25 15:08:08: Done. Added: 524171 records to database. Deleting file...
+2018-08-25 15:08:08: Exporting: 60189440.json
+2018-08-25 15:17:01: Done. Added: 310024 records to database. Deleting file...
+2018-08-25 15:17:01: Exporting: 2891371465.json
+2018-08-25 15:38:10: Done. Added: 746629 records to database. Deleting file...
+2018-08-25 15:38:10: Exporting: 2846697758.json
+2018-08-25 15:53:05: Done. Added: 528044 records to database. Deleting file...
+2018-08-25 15:53:05: Exporting: 2846588806.json
+2018-08-25 16:09:32: Done. Added: 592865 records to database. Deleting file...
+2018-08-25 16:09:32: Exporting: 2836231397.json
+2018-08-25 16:22:43: Done. Added: 471981 records to database. Deleting file...
+2018-08-25 16:22:43: Exporting: 60642362.json
+2018-08-25 16:37:12: Done. Added: 517820 records to database. Deleting file...
+2018-08-25 16:37:12: Exporting: 2938327234.json
+2018-08-25 16:47:00: Done. Added: 349885 records to database. Deleting file...
+2018-08-25 16:47:00: Exporting: 2836370332.json
+2018-08-25 17:00:16: Done. Added: 463764 records to database. Deleting file...
+2018-08-25 17:00:16: Exporting: 2837526710.json
+2018-08-25 17:11:43: Done. Added: 406983 records to database. Deleting file...
+2018-08-25 17:11:43: Exporting: 350618277.json
+2018-08-25 17:24:33: Done. Added: 451674 records to database. Deleting file...
+2018-08-25 17:24:33: Exporting: 348079520858.json
+2018-08-25 17:55:33: Done. Added: 1100634 records to database. Deleting file...
+2018-08-25 17:55:33: Exporting: 27770180.json
+2018-08-25 18:05:59: Done. Added: 342123 records to database. Deleting file...
+2018-08-25 18:05:59: Exporting: 2868042262.json
+2018-08-25 18:12:27: -----------------
+2018-08-25 18:12:27: Error:
+2018-08-25 18:12:27: -----------------
+2018-08-25 18:12:27: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:12:27:  
+2018-08-25 18:12:27:  
+2018-08-25 18:12:27: Exporting: 2836693239.json
+2018-08-25 18:13:20: -----------------
+2018-08-25 18:13:20: Error:
+2018-08-25 18:13:20: -----------------
+2018-08-25 18:13:20: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:13:20:  
+2018-08-25 18:13:20:  
+2018-08-25 18:13:20: Exporting: 2841927772.json
+2018-08-25 18:14:04: -----------------
+2018-08-25 18:14:04: Error:
+2018-08-25 18:14:04: -----------------
+2018-08-25 18:14:04: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:14:04:  
+2018-08-25 18:14:04:  
+2018-08-25 18:14:04: Exporting: 98082013.json
+2018-08-25 18:14:47: -----------------
+2018-08-25 18:14:47: Error:
+2018-08-25 18:14:47: -----------------
+2018-08-25 18:14:47: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:14:47:  
+2018-08-25 18:14:47:  
+2018-08-25 18:14:47: Exporting: 2846550649.json
+2018-08-25 18:15:09: -----------------
+2018-08-25 18:15:09: Error:
+2018-08-25 18:15:09: -----------------
+2018-08-25 18:15:09: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:15:09:  
+2018-08-25 18:15:09:  
+2018-08-25 18:15:09: Exporting: 2832310918.json
+2018-08-25 18:15:33: -----------------
+2018-08-25 18:15:33: Error:
+2018-08-25 18:15:33: -----------------
+2018-08-25 18:15:33: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 8] nodename nor servname provided, or not known)")
+2018-08-25 18:15:33:  
+2018-08-25 18:15:33:  
+2018-08-25 18:15:33: Exporting: 2856389336.json
+2018-08-25 18:33:31: -----------------
+2018-08-25 18:33:31: Error:
+2018-08-25 18:33:31: -----------------
+2018-08-25 18:33:31: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' (timed out)")
+2018-08-25 18:33:31:  
+2018-08-25 18:33:31:  
+2018-08-25 18:33:31: Exporting: 2836049383.json
+2018-08-25 18:34:20: -----------------
+2018-08-25 18:34:20: Error:
+2018-08-25 18:34:20: -----------------
+2018-08-25 18:34:20: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' (timed out)")
+2018-08-25 18:34:20:  
+2018-08-25 18:34:20:  
+2018-08-25 18:34:20: Exporting: 2868925623.json
+2018-08-25 18:35:07: -----------------
+2018-08-25 18:35:07: Error:
+2018-08-25 18:35:07: -----------------
+2018-08-25 18:35:07: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' (timed out)")
+2018-08-25 18:35:07:  
+2018-08-25 18:35:07:  
+2018-08-25 18:35:07: Exporting: 87229463.json
+2018-08-25 18:35:34: -----------------
+2018-08-25 18:35:34: Error:
+2018-08-25 18:35:34: -----------------
+2018-08-25 18:35:34: (2003, "Can't connect to MySQL server on 'location-uploads.coxl8wirabtc.us-west-1.rds.amazonaws.com' ([Errno 61] Connection refused)")
+2018-08-25 18:35:34:  
+2018-08-25 18:35:34:  
+2018-08-25 18:35:34: Exporting: 2832310655.json
+2018-08-25 18:57:24: Done. Added: 283126 records to database. Deleting file...
+2018-08-25 18:57:24: Exporting: 2841971336.json
+2018-08-25 19:39:52: Done. Added: 682592 records to database. Deleting file...
+2018-08-25 19:39:52: Exporting: 2833957065.json
+2018-08-25 20:03:49: Done. Added: 398879 records to database. Deleting file...
+2018-08-25 20:03:49: Exporting: 2844901133.json
+2018-08-25 20:36:50: Done. Added: 574113 records to database. Deleting file...
+2018-08-25 20:36:50: Exporting: 2856215432.json
+2018-08-25 21:01:47: Done. Added: 383502 records to database. Deleting file...
+2018-08-25 21:01:47: Exporting: 87729757.json
+2018-08-25 21:25:37: Done. Added: 644781 records to database. Deleting file...
+2018-08-25 21:25:37: Exporting: 2856370505.json
+2018-08-25 22:04:55: Done. Added: 1047285 records to database. Deleting file...
+2018-08-25 22:04:55: Exporting: 2836437565.json
+2018-08-25 22:19:20: Done. Added: 384235 records to database. Deleting file...
+2018-08-25 22:19:20: Exporting: 60728780.json
+2018-08-25 22:51:11: Done. Added: 864668 records to database. Deleting file...
+2018-08-25 22:51:11: Exporting: 2856285800.json
+2018-08-25 23:29:11: Done. Added: 1021613 records to database. Deleting file...
+2018-08-25 23:29:11: Exporting: 2846863536.json
+2018-08-25 23:29:12: -----------------
+2018-08-25 23:29:12: Error:
+2018-08-25 23:29:12: -----------------
+2018-08-25 23:29:12: 'locations'
+2018-08-25 23:29:12:  
+2018-08-25 23:29:12:  
+2018-08-25 23:29:12: Exporting: 2856380433.json
+2018-08-25 23:54:04: Done. Added: 657963 records to database. Deleting file...
+2018-08-25 23:54:04: Exporting: 2839327782.json
+2018-08-26 00:30:58: Done. Added: 995160 records to database. Deleting file...
+2018-08-26 00:30:58: Exporting: 429822631005.json
+2018-08-26 00:45:01: Done. Added: 361186 records to database. Deleting file...
+2018-08-26 00:45:01: Exporting: 2842640944.json
+2018-08-26 01:17:15: Done. Added: 829536 records to database. Deleting file...
+2018-08-26 01:17:15: Exporting: 2846683086.json
+2018-08-26 01:34:29: Done. Added: 377427 records to database. Deleting file...
+2018-08-26 01:34:29: Exporting: 2868044816.json
+2018-08-26 01:57:02: Done. Added: 602957 records to database. Deleting file...
+2018-08-26 01:57:02: Exporting: 2840841157.json
+2018-08-26 02:20:47: Done. Added: 630792 records to database. Deleting file...
+2018-08-26 02:20:47: Exporting: 2846579708.json
+2018-08-26 02:39:24: Done. Added: 502495 records to database. Deleting file...
+2018-08-26 02:39:24: Exporting: 29708160.json
+2018-08-26 03:11:01: Done. Added: 855262 records to database. Deleting file...
+2018-08-26 03:11:01: Exporting: 2846550992.json
+2018-08-26 03:22:09: Done. Added: 310760 records to database. Deleting file...
+2018-08-26 03:22:09: Exporting: 2833256441.json
+2018-08-26 03:48:44: Done. Added: 729763 records to database. Deleting file...
+2018-08-26 03:48:44: Exporting: 2845683553.json
+2018-08-26 04:09:51: Done. Added: 575790 records to database. Deleting file...
+2018-08-26 04:09:51: Finished Round. Sleeping for: 60 minutes
+2018-08-26 05:09:51: Exporting: 2841927772.json
+2018-08-26 05:30:00: Done. Added: 561467 records to database. Deleting file...
+2018-08-26 05:30:00: Exporting: 98082013.json
+2018-08-26 05:42:16: Done. Added: 335601 records to database. Deleting file...
+2018-08-26 05:42:16: Exporting: 2846863536.json
+2018-08-26 05:42:16: -----------------
+2018-08-26 05:42:16: Error:
+2018-08-26 05:42:16: -----------------
+2018-08-26 05:42:16: 'locations'
+2018-08-26 05:42:16:  
+2018-08-26 05:42:16:  
+2018-08-26 05:42:16: Exporting: 2868042262.json
+2018-08-26 06:16:43: Done. Added: 925910 records to database. Deleting file...
+2018-08-26 06:16:43: Exporting: 2970643898.json
+2018-08-26 06:16:44: -----------------
+2018-08-26 06:16:44: Error:
+2018-08-26 06:16:44: -----------------
+2018-08-26 06:16:44: 'locations'
+2018-08-26 06:16:44:  
+2018-08-26 06:16:44:  
+2018-08-26 06:16:44: Exporting: 2868925623.json
+2018-08-26 06:41:43: Done. Added: 666510 records to database. Deleting file...
+2018-08-26 06:41:43: Exporting: 2856389336.json
+2018-08-26 07:06:36: Done. Added: 651487 records to database. Deleting file...
+2018-08-26 07:06:36: Exporting: 2832310918.json
+2018-08-26 07:23:01: Done. Added: 535761 records to database. Deleting file...
+2018-08-26 07:23:01: Exporting: 2836693239.json
+2018-08-26 07:39:48: Done. Added: 598012 records to database. Deleting file...
+2018-08-26 07:39:48: Exporting: 2846550649.json
+2018-08-26 07:52:30: Done. Added: 450751 records to database. Deleting file...
+2018-08-26 07:52:30: Exporting: 87229463.json
+2018-08-26 08:08:31: Done. Added: 572385 records to database. Deleting file...
+2018-08-26 08:08:31: Exporting: 2836049383.json
+2018-08-26 08:26:42: Done. Added: 638138 records to database. Deleting file...
+2018-08-26 08:26:42: Finished Round. Sleeping for: 60 minutes

@@ -352,6 +352,69 @@ def save_json(json_obj, name):
 	outfile.close()
 
 
+#Checks if the given json has the google structure
+def check_json_strucure(data):
+
+
+	try:
+		counter = 0
+		for location in data['locations'][0:-1]:
+
+			counter = counter + 1
+			temp_loc = {}
+			temp_loc['id_entrevistado'] = interview_id
+
+			#sends it to seconds from 200/01/01
+			temp_loc['timestamp'] = int(int(location['timestampMs'])/1000 - shift_seconds)
+
+			temp_loc['latitude']  = location['latitudeE7']
+			temp_loc['longitude'] = location['longitudeE7']
+
+			temp_loc['accuracy'] = None
+			if 'accuracy' in location:
+				temp_loc['accuracy'] = location['accuracy']
+
+			temp_loc['velocity'] = None
+			if 'velocity' in location:
+				temp_loc['velocity'] = location['velocity']
+
+			temp_loc['altitude'] = None
+			if 'altitude' in location:
+				temp_loc['altitude'] = location['altitude']
+
+			temp_loc['vertical_accuracy'] =  None
+			if 'verticalAccuracy' in location:
+				temp_loc['vertical_accuracy'] = location['verticalAccuracy']
+
+
+			temp_loc['activity_timestamp'] = None
+			temp_loc['activity'] = None
+			temp_loc['activity_confidence'] = None
+
+			if('activity' in location):
+				act = location['activity'][0]
+				temp_loc['activity_timestamp'] = int(int(act['timestampMs'])/1000 - shift_seconds)
+
+				act_type = act['activity'][0]['type']
+				if not act_type in act_mapper.keys():
+					temp_loc['activity'] = act_mapper['UNKNOWN']
+				else:
+					temp_loc['activity'] = act_mapper[act_type]
+
+				temp_loc['activity_confidence'] = act['activity'][0]['confidence']
+
+			if(counter > 10):
+				break
+
+		return(True)
+
+	except:
+		return(False)
+
+
+
+
+
 #inserts the json file into the database by batches
 def export_json(interview_id, data, verbose = False):
 

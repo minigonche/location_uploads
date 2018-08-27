@@ -1,4 +1,4 @@
-CREATE TABLE `db_location_uploads`.`locations_prod` (
+CREATE TABLE `db_location_uploads`.`locations_dev` (
   `id_entrevistado` VARCHAR(18) NOT NULL,
   `timestamp` INT UNSIGNED NULL,
   `latitude` INT NULL,

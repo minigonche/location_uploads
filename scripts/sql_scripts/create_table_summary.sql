@@ -1,4 +1,4 @@
-CREATE TABLE `db_location_uploads`.`summary_prod` (
+CREATE TABLE `db_location_uploads`.`summary_dev` (
   `carnet` VARCHAR(25) NOT NULL,
   `id_entrevistado` VARCHAR(18) NOT NULL,
   `timestamp_json`BIGINT,

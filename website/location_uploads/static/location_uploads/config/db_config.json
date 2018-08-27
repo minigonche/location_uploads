@@ -8,6 +8,6 @@
 	"log_location" : "publisher.log",
 	"json_location" : "location_uploads/static/location_uploads/jsons/",
 	"sleep_time" : 3600,
-	"table_names" : {"surveys" : "survey_prod", "locations" : "locations_prod", "summary" : "summary_prod"}
+	"table_names" : {"surveys" : "survey_dev", "locations" : "locations_dev", "summary" : "summary_dev"}
 
 }

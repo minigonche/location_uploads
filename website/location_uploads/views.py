@@ -10,7 +10,11 @@ from location_uploads import hash_anonymize as ha
 # Create your views here.
 
 def index(request):
-    return render(request, 'location_uploads/index.html', None)
+	data = {}
+	data['interview_id'] = request.session.get('interview_id', '')
+	data['student_id'] = request.session.get('student_id', '')
+
+	return render(request, 'location_uploads/index.html', data)
 
 
 def upload_info(request):
@@ -28,7 +32,11 @@ def upload_info(request):
 
 	student_id = request.POST.get('carnet')
 	interview_id = request.POST.get('id_entrevistado')
-		
+
+	request.session['interview_id'] = interview_id
+	request.session['student_id'] = student_id
+
+        
 	if(anonymize):
 			interview_id = ha.anonymize(interview_id)
 
@@ -119,7 +127,7 @@ def upload_info(request):
 		#IF already uploaded the json
 		if(upload_status == "FOUND_JSON"):
 			data['mensaje_error'] = "Lo sentimos, pero el estudiante: " + student_id + " ya subió el archivo .json de la persona con identificación: " + request.POST.get('id_entrevistado') +  "."
-			return render(request, 'location_uploads/error.html', data)			
+			return render(request, 'location_uploads/error.html', data)
 
 		#If other student uploaded that info
 		if(interview_id_status == "UPLOADED"):
@@ -131,16 +139,21 @@ def upload_info(request):
 			#NOt a JSON FILE
 			data['mensaje_error'] = 'El archivo sumistrado no tiene una extensión .json. Asegurse de subir el archivo apropiado.'
 			return render(request, 'location_uploads/error.html', data)
-        
-		print(json_file.name + ' received succesfully')	
-		json_text = json_file.read().decode("utf-8")	
+
+		print(json_file.name + ' received succesfully')
+		json_text = json_file.read().decode("utf-8")
 
 
 		try:
 			data = json.loads(json_text)
 		except:
-			data['mensaje_error'] = 'El archivo suministrado está corrupto y no puede ser procesado, verifique que se encuentre en formato JSON.'
+			data['mensaje_error'] = 'Lo sentimos, el archivo suministrado está corrupto y no puede ser procesado, verifique que se encuentre en formato JSON.'
 			return render(request, 'location_uploads/error.html', data)
+
+		if(not ps.check_json_strucure(data)):
+			data['mensaje_error'] = 'Lo sentimos, pero aunque el archivo suministrado si posee una estructura JSON, pero no corresponde a la estructura de un archivo de ubicaciones historicas de Google.'
+			return render(request, 'location_uploads/error.html', data)
+
 
 		#checks status of json
 		json_hash = ha.get_hex_from_json(data)
@@ -163,11 +176,11 @@ def upload_info(request):
 		if(grupo == ""):
 			grupo = "NINGUNO"
 
-		
+
 		data['student_id'] = student_id
 		data['interview_id'] = interview_id
 		data['json_hash'] = json_hash
-		
+
 
 		ps.save_json(json_obj = data, name = interview_id)
 		ps.json_received(interview_id, student_id, json_hash, grupo)
@@ -175,12 +188,12 @@ def upload_info(request):
 		data['envio'] = 'archivo json'
 		data['por_enviar'] = 'la encuesta'
 
-		
+
 
 	else:
 		data['mensaje_error'] = "Tipo encuesta: "  + request.POST.get('tipo_encuesta') + ' no soportado.' + '\n' + 'Favor comuniquese con el monitor del curso.'
 		return render(request, 'location_uploads/error.html', data)
-		
+
 
 
 	return render(request, 'location_uploads/result.html', data)
@@ -189,6 +202,3 @@ def upload_info(request):
 
 		#data['mensaje_error'] = "Se produjo el siguiente error en el servidor: \n" + str(e) + "\n\n." + "Por favor comuníquese con el monitor."
 		#return render(request, 'location_uploads/error.html', data)
-
-
-
