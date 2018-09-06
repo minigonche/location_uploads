@@ -40,6 +40,16 @@ def get_config_file():
 	return(conf)
 
 
+def get_survey_urls():
+
+	conf = get_config_file()
+	return(conf['survey_urls'])
+
+def get_json_urls():
+
+	conf = get_config_file()
+	return(conf['json_urls'])
+
 def activity_mapper():
 
 	file =  open(get_static_location() + "config/activity_mapper.json", "r")

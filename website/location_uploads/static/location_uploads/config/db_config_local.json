@@ -7,10 +7,9 @@
 	"max_insert_batch" : 10000,
 	"log_location" : "publisher.log",
 	"json_location" : "location_uploads/static/location_uploads/jsons/",
-	"json_error_location" : "location_uploads/static/location_uploads/error_jsons/",
 	"sleep_time" : 3600,
-	"survey_urls" : ["survey"],
-	"json_urls" : ["jsons"],
+	"survey_urls" : ["http://localhost:8000/location_uploads/survey","http://0.0.0.0:8000/location_uploads/survey"],
+	"json_urls" : ["http://localhost:8000/location_uploads/jsons","http://0.0.0.0:8000/location_uploads/jsons"],
 	"table_names" : {"surveys" : "survey_dev", "locations" : "locations_dev", "summary" : "summary_dev"}
 
 }

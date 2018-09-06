@@ -29,6 +29,7 @@ while(True):
 
 	conf = ps.get_config_file()
 	json_location = conf["json_location"]
+	json_error_location = conf["json_error_location"]
 	sleep_time = conf["sleep_time"]
 
 
@@ -50,9 +51,8 @@ while(True):
 					write_to_log('Found: ' + file_name + ' which is not a JSON. Deleting file...')
 					os.remove(json_location + file_name)
 				else:
-					json_file = open(json_location + file_name, 'r')
-					data = json.load(json_file)
-					json_file.close()
+					with open(json_location + file_name, 'r') as json_file:
+						data = json.load(json_file)						
 
 					interview_id = data['interview_id']
 					json_hash = data['json_hash']
@@ -70,6 +70,8 @@ while(True):
 			    write_to_log('-----------------')
 			    write_to_log(str(e))
 			    write_to_log(' ')
+			    os.rename(json_location + file_name, json_error_location + file_name)
+			    write_to_log('File mooved to error jsons')
 			    write_to_log(' ')
 
 		write_to_log('Finished Round. Sleeping for: ' + str(int(sleep_time/60)) + ' minutes')

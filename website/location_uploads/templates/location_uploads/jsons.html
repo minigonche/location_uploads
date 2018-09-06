@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Movilidad Bogota</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+
+
+  </head>
+
+	<body>
+	<div class="container">
+      <div class="py-5 text-center">
+      {% load static %}
+        <img class="d-block mx-auto mb-4" src="{% static "location_uploads/img/rosario.jpg" %}" alt="" width="680" height="342">
+        <h1>Datos de Movilidad en Bogotá</h1>
+        <p class="lead"> Sistema de recolección de datos - Datos Geográficos</p>
+      </div>
+    </div>
+
+
+	<form action="{% url 'location_uploads:upload_json' %}" method="POST" enctype="multipart/form-data" class="form-horizontal" id = 'central_form'>
+	{% csrf_token %}
+
+
+	<div class="form-group">
+
+		<div class="container">
+	       <div class="text-left">
+	        	<h3>Información del Estudiante Referencia</h3>
+	       </div>
+     	</div>
+
+     	<div class="container">
+	      <div class="py-1 text-center">
+	        <p class="lead"> </p>
+	      </div>
+    	</div>
+
+		<div class="container">
+
+			<div class = "row">
+				<div class="col-2"></div>
+				<div class="col-8">
+					<label for="carnet">Carnet del Estudiante</label>
+				 	<div class="form-group">
+    					<input type="text" class="form-control" id="carnet" name="carnet" placeholder="Ingrese el número de carnet que le solicitó llenar esta encuesta" required="True" value = {{student_id}} >
+  					</div>
+  				</div>
+  				<div class="col-2"></div>
+			</div>
+			<div class = "row">
+				<div class="col-2"></div>
+				<div class="col-8">
+					<label for="id_entrevistado">Id del Entrevistado</label>
+				 	<div class="form-group">
+    					<input type="text" class="form-control" id="id_entrevistado" name="id_entrevistado" placeholder="Ingerese la identificación del entrevistado" required="True" value = {{interview_id}}>
+  					</div>
+  				</div>
+  				<div class="col-2"></div>
+			</div>
+
+
+		</div>
+
+
+		<div class="container">
+	      <div class="py-3 text-center">
+	        <p class="lead"> </p>
+	      </div>
+    	</div>
+
+
+		<!--              -->
+		<!--      JSON    -->
+		<!--               -->
+
+		<div id="subir_json">
+
+			<div class="container">
+		       <div class="text-left">
+		       		<h3>Información de Movilidad</h3>
+		       		<p class="lead">Por favor suba el archivo .json con las ubicaciones.<br/>
+		       		<strong> Importante: </strong> Este proceso toma entre 3 y 5 minutos dependiendo del tamaño del archivo. Por favor espere hasta recibir confirmación. </p>
+		       </div>
+	     	</div>
+
+
+	     	<div class="container">
+				<div class="row">
+					<div class="col-2"></div>
+	            	<div class="col-8">
+					    <label for="grupo_rad"> Grupo del Entrevistado </label>
+					    <div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "NINGUNO" checked> Ninguno</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "TAXI"> Taxista</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "UBER"> Uber</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "DISCAPACITADO"> Persona Con Discapacidad</label>
+						</div>
+						<div class="radio">
+						  <label><input type="radio" name="grupo_rad" id="grupo_rad" value = "OTRO"> Otro</label>
+						  <input type="text" class="form-control" id="grupo_text" name="grupo_text" placeholder="¿Cuál?">
+						</div>
+
+					</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+			<div class="container">
+		      <div class="py-2 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-2"></div>
+	            	<div class="col-8">
+					    <label for="name">Archivo .json: </label>
+					    <div class="form-group">
+					     	<input type="file" id = "json_file" name="json_file" id="json_file" class="form-control">
+					     </div>
+					</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+
+			<div class="container">
+		      <div class="py-2 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-5"></div>
+	            	<div class="col-2">
+	            		<div class="form-group">
+							<input type="submit"  id='send_json_button' class="btn btn-success" value="Enviar Datos">
+						</div>
+					</div>
+					<div class="col-5"></div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	</form>
+
+	        <div class="container">
+          <div class="py-1">
+            <p class="lead"></p>
+          </div>
+        </div>
+
+      <div class="container">
+        <div class = "row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <button type="button" class="btn btn-light" onclick="window.history.go(-1); return false;">Volver al Sistema Recolector de Datos</button>
+          </div>
+          <div class="col-4">          
+        </div>
+      </div>
+
+	        <div class="container">
+          <div class="py-4">
+            <p class="lead"></p>
+          </div>
+        </div>
+            
+        <div class="container">
+          <div class="py-1 text-center">
+            <p>
+              <hr>
+              Universidad del Rosario - 2018
+            </p>
+          </div>
+        </div>
+
+
+
+	</body>
+</html>
