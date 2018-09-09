@@ -1,4 +1,0 @@
-#Requirements
-pip install PyMySQL
-pip install pandas
-
