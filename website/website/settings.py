@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*ioycyl^x3+4+0waqpz(dqst!-res5!^k6g=z)+^jd6=zl7dbk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [".elasticbeanstalk.com", ".compute.amazonaws.com", "localhost","0.0.0.0"]
 
