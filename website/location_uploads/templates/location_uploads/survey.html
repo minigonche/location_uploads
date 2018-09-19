@@ -884,37 +884,29 @@
 	     		</div>
 
 				<div class="form-group">
-					<div class = "row">
-						<div class="col-2"></div>
+					<div class = "row">						
 					    <label class="col-4 control-label text-lg-center">Hora que se levanta</label>
 					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23"  placeholder="hh" name="horas_levantar" id="horas_levantar"></div>
 					    <label class="col- control-label text-lg-center">:</label>
 					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_levantar" id="minutos_levantar"> </div>
-					    <div class="col-4"></div>
 					</div>
-					<div class = "row">
-						<div class="col-2"></div>
+					<div class = "row">						
 					    <label class="col-4 control-label text-lg-center">Hora en la que sale de su hogar</label>
 					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_salir_hogar" id="horas_salir_hogar"></div>
 					    <label class="col- control-label text-lg-center">:</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_salir_hogar" id="minutos_salir_hogar"> </div>
-					    <div class="col-4"></div>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59"  placeholder="mm" name="minutos_salir_hogar" id="minutos_salir_hogar"> </div>					    
 					</div>
-					<div class = "row">
-						<div class="col-2"></div>
+					<div class = "row">						
 					    <label class="col-4 control-label text-lg-center">Hora que llega a su destino</label>
 					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_llegar_destino" id="horas_llegar_destino"></div>
 					    <label class="col- control-label text-lg-center">:</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_llegar_destino" id="minutos_llegar_destino"> </div>
-					    <div class="col-4"></div>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_llegar_destino" id="minutos_llegar_destino"> </div>					    
 					</div>
-					<div class = "row">
-						<div class="col-2"></div>
+					<div class = "row">						
 					    <label class="col-4 control-label text-lg-center">Hora en la que vuelve a su hogar</label>
 					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "23" placeholder="hh" name="horas_volver_hogar" id="horas_volver_hogar"></div>
 					    <label class="col- control-label text-lg-center">:</label>
-					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_volver_hogar" id="minutos_volver_hogar"> </div>
-					    <div class="col-4"></div>
+					    <div class="col-sm"><input class="form-control" type="number" min = "0" max = "59" placeholder="mm" name="minutos_volver_hogar" id="minutos_volver_hogar"> </div>					    
 					</div>
 
 			    </div>
@@ -1064,124 +1056,262 @@
 	     		<div class = "row">
 	     			<div class="col-1"></div>
 	     			<div class="col-11">
-	     				<p>Qué tan importante son para usted los siguientes temas (organícelos de la “1” a “8” siendo “1” lo más importante y “8” lo menos importante), y que tan importante cree usted que son para las siguientes personas:</p>
+	     				<p>Qué tan importante son para usted los siguientes temas (organícelos de la “1” a “8” siendo “1” lo más importante y “8” lo menos importante), y que tan importante cree usted que son para las siguientes personas/grupos de personas: <strong> Para mi, Politicos Bogotanos, Mockus, Lucho, Samuel, Petro y Peñalosa</strong></p>
 	     			</div>
 	     		</div>
 
-				<div class="form-group">
-					<div class = "row">
-						<div class="col-1"></div>
-					    <label class="col-4 control-label text-lg-center font-weight-bold">Temas</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Para mi</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Politicos Bogotanos</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Mockus</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Lucho</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Samuel</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Petro</label>
-						<label class="col-1 control-label text-lg-left font-weight-bold">Peñalosa</label>
-						<div class="col-1"></div>
+	     		<div class="form-group">
+					<div class = "row">						
+					    <label class="col-6 control-label text-center font-weight-bold">Temas</label>
+						<label class="col-3 control-label text-center font-weight-bold">Para mi</label>
+						<label class="col-3 control-label text-center font-weight-bold">Políticos Bogotanos</label>
 					</div>
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Control de la Calidad del Aire</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_calidad_aire" id="mi_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_calidad_aire" id="politicos_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_calidad_aire" id="mockus_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_calidad_aire" id="lucho_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_calidad_aire" id="samuel_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_calidad_aire" id="petro_calidad_aire"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_calidad_aire" id="penhalosa_calidad_aire"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control de la Calidad del Aire</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_calidad_aire" id="mi_calidad_aire"> </div>		
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_calidad_aire" id="politicos_calidad_aire"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad ante hurtos y homicidios</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_hurtos" id="mi_seguridad_hurtos"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_hurtos" id="politicos_seguridad_hurtos"> </div>
 			        </div>
 
 					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Seguridad ante hurtos y homicidios</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_hurtos" id="mi_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_hurtos" id="politicos_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_hurtos" id="mockus_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_hurtos" id="lucho_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_hurtos" id="samuel_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_hurtos" id="petro_seguridad_hurtos"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_hurtos" id="penhalosa_seguridad_hurtos"> </div>
+				        <label class="col-6 control-label text-center">Disponibilidad de parques y zonas verdes</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_parques_zonas_verdes" id="mi_parques_zonas_verdes"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_parques_zonas_verdes" id="politicos_parques_zonas_verdes"> </div>
 			        </div>
 
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Disponibilidad de parques y zonas verdes</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_parques_zonas_verdes" id="mi_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_parques_zonas_verdes" id="politicos_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_parques_zonas_verdes" id="mockus_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_parques_zonas_verdes" id="lucho_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_parques_zonas_verdes" id="samuel_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_parques_zonas_verdes" id="petro_parques_zonas_verdes"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_parques_zonas_verdes" id="penhalosa_parques_zonas_verdes"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad del peatón</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_peaton" id="mi_seguridad_peaton"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_peaton" id="politicos_seguridad_peaton"> </div>
 			        </div>
 
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Seguridad del peatón</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_seguridad_peaton" id="mi_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_seguridad_peaton" id="politicos_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_peaton" id="mockus_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_peaton" id="lucho_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_peaton" id="samuel_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_peaton" id="petro_seguridad_peaton"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_peaton" id="penhalosa_seguridad_peaton"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Plantación árboles</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_plantar_arboles" id="mi_plantar_arboles"> </div><div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_plantar_arboles" id="politicos_plantar_arboles"> </div>
 			        </div>
 
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Plantación árboles</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_plantar_arboles" id="mi_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_plantar_arboles" id="politicos_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_plantar_arboles" id="mockus_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_plantar_arboles" id="lucho_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_plantar_arboles" id="samuel_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_plantar_arboles" id="petro_plantar_arboles"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_plantar_arboles" id="penhalosa_plantar_arboles"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control ruido</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_control_ruido" id="mi_control_ruido"> </div>	<div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_control_ruido" id="politicos_control_ruido"> </div>
 			        </div>
 
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Control ruido</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_control_ruido" id="mi_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_control_ruido" id="politicos_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_control_ruido" id="mockus_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_control_ruido" id="lucho_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_control_ruido" id="samuel_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_control_ruido" id="petro_control_ruido"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_control_ruido" id="penhalosa_control_ruido"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Mejoramiento del transporte público</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_mejoramiento_transporte" id="mi_mejoramiento_transporte"> </div>				        
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_mejoramiento_transporte" id="politicos_mejoramiento_transporte"> </div>				        
 			        </div>
 
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Mejoramiento del transporte público</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_mejoramiento_transporte" id="mi_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_mejoramiento_transporte" id="politicos_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_mejoramiento_transporte" id="mockus_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_mejoramiento_transporte" id="lucho_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_mejoramiento_transporte" id="samuel_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_mejoramiento_transporte" id="petro_mejoramiento_transporte"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_mejoramiento_transporte" id="penhalosa_mejoramiento_transporte"> </div>
-			        </div>
-
-					<div class = "row">
-						<div class="col-1"></div>
-				        <label class="col-4 control-label text-center">Cultura ciudadana</label>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_cultura_ciudadana" id="mi_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_cultura_ciudadana" id="politicos_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_cultura_ciudadana" id="mockus_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_cultura_ciudadana" id="lucho_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_cultura_ciudadana" id="samuel_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_cultura_ciudadana" id="petro_cultura_ciudadana"> </div>
-				        <div class="col-1"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_cultura_ciudadana" id="penhalosa_cultura_ciudadana"> </div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Cultura ciudadana</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mi_cultura_ciudadana" id="mi_cultura_ciudadana"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="politicos_cultura_ciudadana" id="politicos_cultura_ciudadana"> </div>
 			        </div>
 
 			    </div>
 
-			</div>
+			
 
 
+			<div class="container">
+		      <div class="py-1 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
+	    	<div class="form-group">
+					<div class = "row">						
+					    <label class="col-6 control-label text-center font-weight-bold">Temas</label>
+						<label class="col-3 control-label text-center font-weight-bold">Mockus</label>
+						<label class="col-3 control-label text-center font-weight-bold">Lucho</label>
+					</div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control de la Calidad del Aire</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_calidad_aire" id="mockus_calidad_aire"> </div>		
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_calidad_aire" id="lucho_calidad_aire"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad ante hurtos y homicidios</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_hurtos" id="mockus_seguridad_hurtos"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_hurtos" id="lucho_seguridad_hurtos"> </div>
+			        </div>
+
+					<div class = "row">
+				        <label class="col-6 control-label text-center">Disponibilidad de parques y zonas verdes</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_parques_zonas_verdes" id="mockus_parques_zonas_verdes"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_parques_zonas_verdes" id="lucho_parques_zonas_verdes"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad del peatón</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_seguridad_peaton" id="mockus_seguridad_peaton"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_seguridad_peaton" id="lucho_seguridad_peaton"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Plantación árboles</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_plantar_arboles" id="mockus_plantar_arboles"> </div><div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_plantar_arboles" id="lucho_plantar_arboles"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control ruido</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_control_ruido" id="mockus_control_ruido"> </div>	<div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_control_ruido" id="lucho_control_ruido"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Mejoramiento del transporte público</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_mejoramiento_transporte" id="mockus_mejoramiento_transporte"> </div>				        
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_mejoramiento_transporte" id="lucho_mejoramiento_transporte"> </div>				        
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Cultura ciudadana</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="mockus_cultura_ciudadana" id="mockus_cultura_ciudadana"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="lucho_cultura_ciudadana" id="lucho_cultura_ciudadana"> </div>
+			        </div>
+
+			    </div>
+		
+
+			<div class="container">
+		      <div class="py-1 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
+
+	    	<div class="form-group">
+					<div class = "row">						
+					    <label class="col-6 control-label text-center font-weight-bold">Temas</label>
+						<label class="col-3 control-label text-center font-weight-bold">Samuel</label>
+						<label class="col-3 control-label text-center font-weight-bold">Petro</label>
+					</div>
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control de la Calidad del Aire</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_calidad_aire" id="samuel_calidad_aire"> </div>		
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_calidad_aire" id="petro_calidad_aire"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad ante hurtos y homicidios</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_hurtos" id="samuel_seguridad_hurtos"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_hurtos" id="petro_seguridad_hurtos"> </div>
+			        </div>
+
+					<div class = "row">
+				        <label class="col-6 control-label text-center">Disponibilidad de parques y zonas verdes</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_parques_zonas_verdes" id="samuel_parques_zonas_verdes"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_parques_zonas_verdes" id="petro_parques_zonas_verdes"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Seguridad del peatón</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_seguridad_peaton" id="samuel_seguridad_peaton"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_seguridad_peaton" id="petro_seguridad_peaton"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Plantación árboles</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_plantar_arboles" id="samuel_plantar_arboles"> </div><div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_plantar_arboles" id="petro_plantar_arboles"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Control ruido</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_control_ruido" id="samuel_control_ruido"> </div>	<div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_control_ruido" id="petro_control_ruido"> </div>
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Mejoramiento del transporte público</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_mejoramiento_transporte" id="samuel_mejoramiento_transporte"> </div>				        
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_mejoramiento_transporte" id="petro_mejoramiento_transporte"> </div>				        
+			        </div>
+
+					<div class = "row">						
+				        <label class="col-6 control-label text-center">Cultura ciudadana</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="samuel_cultura_ciudadana" id="samuel_cultura_ciudadana"> </div>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="petro_cultura_ciudadana" id="petro_cultura_ciudadana"> </div>
+			        </div>
+
+			    </div>
+	
+
+			<div class="container">
+		      <div class="py-1 text-center">
+		        <p class="lead"> </p>
+		      </div>
+	    	</div>
+
+
+	    	<div class="form-group">
+					<div class = "row">
+						<div class="col-2"></div>						
+					    <label class="col-6 control-label text-center font-weight-bold">Temas</label>
+						<label class="col-3 control-label text-center font-weight-bold">Peñalosa</label>
+						<div class="col-1"></div>
+					</div>
+					<div class = "row">	
+						<div class="col-2"></div>					
+				        <label class="col-6 control-label text-center">Control de la Calidad del Aire</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_calidad_aire" id="penhalosa_calidad_aire"> </div>		
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">		
+						<div class="col-2"></div>					
+				        <label class="col-6 control-label text-center">Seguridad ante hurtos y homicidios</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_hurtos" id="penhalosa_seguridad_hurtos"> </div>				       
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">
+						<div class="col-2"></div>	
+				        <label class="col-6 control-label text-center">Disponibilidad de parques y zonas verdes</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_parques_zonas_verdes" id="penhalosa_parques_zonas_verdes"> </div>				    
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">						
+						<div class="col-2"></div>	
+				        <label class="col-6 control-label text-center">Seguridad del peatón</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_seguridad_peaton" id="penhalosa_seguridad_peaton"> </div>
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">				
+						<div class="col-2"></div>			
+				        <label class="col-6 control-label text-center">Plantación árboles</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_plantar_arboles" id="penhalosa_plantar_arboles"> </div>
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">		
+						<div class="col-2"></div>					
+				        <label class="col-6 control-label text-center">Control ruido</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_control_ruido" id="penhalosa_control_ruido"> </div>
+				        <div class="col-1"></div>
+			        </div>
+
+					<div class = "row">	
+						<div class="col-2"></div>						
+				        <label class="col-6 control-label text-center">Mejoramiento del transporte público</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_mejoramiento_transporte" id="penhalosa_mejoramiento_transporte"> </div>				        	
+				        <div class="col-1"></div>			        
+			        </div>
+
+					<div class = "row">		
+						<div class="col-2"></div>					
+				        <label class="col-6 control-label text-center">Cultura ciudadana</label>
+				        <div class="col-3"><input class="form-control" type="number" placeholder="1-8" min = "1" max = "8" name="penhalosa_cultura_ciudadana" id="penhalosa_cultura_ciudadana"> </div>				        
+				        <div class="col-1"></div>
+			        </div>
+
+			    </div>
+		
 
 			<div class="container">
 		      <div class="py-2 text-center">
@@ -1319,13 +1449,13 @@
 
 			<div class="container">
 				<div class="row">
-					<div class="col-5"></div>
-	            	<div class="col-2">
+					<div class="col-4"></div>
+	            	<div class="col-4 text-center">
 	            		<div class="form-group">
 							<input type="submit"  class="btn btn-success" value="Enviar Encuesta">
 						</div>
 					</div>
-					<div class="col-5"></div>
+					<div class="col-4"></div>
 				</div>
 			</div>
 
@@ -1342,11 +1472,11 @@
 
       <div class="container">
         <div class = "row">
-          <div class="col-4"></div>
-          <div class="col-4">
+          <div class="col-3"></div>
+          <div class="col-6 text-center">
             <button type="button" class="btn btn-light" onclick="window.history.go(-1); return false;">Volver al Sistema Recolector de Datos</button>
           </div>
-          <div class="col-4">          
+          <div class="col-3">          
         </div>
       </div>
       
