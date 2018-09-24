@@ -115,4 +115,5 @@ CREATE TABLE `db_location_uploads`.`survey_dev` (
   `tarot_calidad` VARCHAR(2000) NULL,
   `tarot_ambiental` VARCHAR(2000) NULL,
   `tarot_cultura` VARCHAR(2000) NULL,
-  `tarot_democraticas` VARCHAR(2000) NULL);
+  `tarot_democraticas` VARCHAR(2000) NULL,
+  `tarot_movilidad` VARCHAR(2000) NULL);

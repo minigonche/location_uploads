@@ -5,10 +5,15 @@ try:
 	file =  open("location_uploads/static/location_uploads/config/db_config.json", "r")
 	conf = json.load(file)
 	file.close()
-
+	print('')
+	print('')
+	print('-'*60)
+	print('-'*60)
 	print('Running Status Check:')
 	print('')
 	print('Configuration Filed Located')
+	print('')
+	print('')
 	print('Current Configuration:')
 	print('')
 	print('--- Data Base ---')
@@ -120,14 +125,40 @@ try:
 	except KeyError:
 		print('Json URLs time not allocated')
 
-
-	print('')
-	print('')
-	print('Status Check Finished')
-	print('')
-
 except FileNotFoundError:
 	print('Configuration File no Found')
+
+print('')
+print('--- General State ---')
+
+try:
+	file =  open("website/settings.py", "r")
+	debug = False
+	for line in file.readlines():
+		if("DEBUG" in line):
+			if("True" in line):
+				debug = True
+			break
+
+	file.close()
+
+	if(debug):
+		print('Development (Debug On)')
+	else:
+		print('Production (Debug Off)')
+
+
+	print('')
+	print('')
+	print('Status Check Finished')		
+	print('')
+	print('-'*60)
+	print('-'*60)
+
+except:
+	print('Settings File no Found')
+
+
 
 
 
